@@ -1,0 +1,10 @@
+[user]
+	name = Liam Woodleigh-Hardinge
+	email = liam.woodleigh@gmail.com
+[push]
+	autoSetupRebase = always
+	default = current
+[pull]
+    rebase = false
+[init]
+	defaultBranch = main
