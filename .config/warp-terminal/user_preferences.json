@@ -1,0 +1,15 @@
+{
+  "prefs": {
+    "SystemTheme": "false",
+    "AliasExpansionBannerSeen": "true",
+    "ExperimentId": "45635b94-357f-4717-9511-fb962aa0866b",
+    "HasAutoOpenedWelcomeFolder": "true",
+    "Theme": "\"Dark\"",
+    "Shortcuts": "true",
+    "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"BlockSelect\"},{\"Action\":\"OpenWarpDrive\"},{\"Hint\":\"CreateBlock\"},{\"Action\":\"CommandPalette\"},{\"Action\":\"ThemePicker\"},{\"Action\":\"CommandSearch\"},{\"Action\":\"AiCommandSearch\"}]",
+    "ChangelogVersions": "{\"v0.2024.03.19.08.01.stable_01\":true}",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-03-25T13:03:43.520416433Z\"}",
+    "FontSize": "13.0"
+  }
+}

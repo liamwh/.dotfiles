@@ -6,5 +6,19 @@
 	default = current
 [pull]
     rebase = false
+    ff = no
 [init]
 	defaultBranch = main
+[ui "color"]
+	ui = always
+[color]
+	ui = true
+[rerere]
+	enabled = true
+[help]
+	autocorrect = 1
+[credential]
+	helper = store
+[core]
+	autocrlf = input
+	safecrlf = true

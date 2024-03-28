@@ -1,3 +1,5 @@
 .git
+.gitignore
 justfile
 .DS_Store
+README.md
