@@ -22,3 +22,5 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+[include]
+    path = ~/.gitconfig-work
