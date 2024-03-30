@@ -1,5 +1,5 @@
 #!/bin/bash
-## /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 # Clipboard Manager. This needed cliphist & wl-copy and of course rofi
 
 if [[ ! $(pidof rofi) ]]; then
