@@ -8,7 +8,7 @@ config.harfbuzz_features = { "liga=1" }
 
 local os_name = wezterm.target_triple
 if os_name:find("linux") then
-    config.enable_wayland = true
+    config.enable_wayland = false
 elseif os_name:find("windows") then
     config.default_prog = { "wsl.exe" }
 end
@@ -18,7 +18,7 @@ config.keys = {
 }
 config.use_dead_keys = false
 config.adjust_window_size_when_changing_font_size = false
--- Set to window decorations to "NONE" if enabled wayland is set to false on linux when actually using wayland
+-- Set to window decorations to "NONE" if enabled wayland is set to false on linux when actually using wayland and getting weird text glitching
 -- config.window_decorations = "NONE"
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
