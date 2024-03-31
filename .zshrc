@@ -94,10 +94,6 @@ fpath=( $HOME/.wash "${fpath[@]}" )
 
 #  Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-eval "$(direnv hook zsh)"
-eval "$(atuin init zsh)"
 
 # Source wasmer.sh if it exists
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
@@ -126,6 +122,13 @@ plugins=(
 
 # Source oh my ZSH
 source $ZSH/oh-my-zsh.sh
+
+# Source other zsh files
+eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
+eval "$(atuin init zsh)"
+
+eval "$(starship init zsh)"
 
 # Always run compinit after modifying the PATH
 autoload -Uz compinit
