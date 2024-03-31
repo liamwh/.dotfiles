@@ -1,10 +1,11 @@
 #!/bin/bash
 
-CLIENT_NAME="google-chrome"
+# CLIENT_NAME="google-chrome"
+CLIENT_NAME="Brave-browser"
 CLIENTS=$(hyprctl clients -j)
 
-# Convert .class to lowercase and compare with lowercase CLIENT_NAME inside the jq query
-OPEN_WINDOWS_FOR_THIS_CLIENT=$(echo "$CLIENTS" | jq "[.[] | select(.class | ascii_downcase == \"$CLIENT_NAME\")]")
+# Compare with CLIENT_NAME inside the jq query
+OPEN_WINDOWS_FOR_THIS_CLIENT=$(echo "$CLIENTS" | jq "[.[] | select(.class == \"$CLIENT_NAME\")]")
 
 NUM_WINDOWS=$(echo $OPEN_WINDOWS_FOR_THIS_CLIENT | jq length)
 
@@ -25,6 +26,6 @@ if [ "$NUM_WINDOWS" -gt 0 ]; then
         fi
     fi
 else
-    # Open a new instance of Chrome if it's not open.
-    /opt/google/chrome/chrome &> /dev/null &
+    # Open a new instance of Brave if it's not open.
+    /opt/brave-bin/brave &> /dev/null &
 fi
