@@ -23,6 +23,9 @@ export OPENSSL_DIR="/opt/homebrew/opt/openssl@3"
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 
+# Ripgrep Config
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
