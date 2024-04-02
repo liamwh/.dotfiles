@@ -6,7 +6,6 @@
 	default = current
 [pull]
     rebase = true
-    ff = no
 [init]
 	defaultBranch = main
 [ui "color"]
