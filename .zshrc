@@ -115,10 +115,15 @@ plugins=(
     docker
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-vi-mode
 )
 #############################################
 # End of oh my zsh plugins section
 #############################################
+
+# Always run compinit immediately after making modifications to PATH
+autoload -Uz compinit
+compinit
 
 # Source oh my ZSH
 source $ZSH/oh-my-zsh.sh
@@ -127,12 +132,8 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(atuin init zsh)"
-
 eval "$(starship init zsh)"
 
-# Always run compinit after modifying the PATH
-autoload -Uz compinit
-compinit
 
 #############################################
 # Aliases
