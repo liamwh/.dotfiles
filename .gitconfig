@@ -5,7 +5,7 @@
 	autoSetupRebase = always
 	default = current
 [pull]
-    rebase = false
+    rebase = true
     ff = no
 [init]
 	defaultBranch = main
