@@ -1,5 +1,6 @@
 .git
 .gitignore
+.gitmodules
 justfile
 .DS_Store
 README.md
