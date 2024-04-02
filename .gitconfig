@@ -24,8 +24,6 @@
 	autocrlf = input
 	safecrlf = true
     editor = nvim
-[diff]
-    tool = meld
 [include]
     path = ~/.gitconfig-work
 [alias]
