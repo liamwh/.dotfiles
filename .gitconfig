@@ -1,3 +1,5 @@
+[init]
+	defaultBranch = main
 [user]
 	name = Liam Woodleigh-Hardinge
 	email = liam.woodleigh@gmail.com
@@ -6,10 +8,10 @@
 	default = current
 [pull]
     rebase = true
-[init]
-	defaultBranch = main
-[ui "color"]
-	ui = always
+[rebase]
+    autosquash = true
+[branch]
+    autosetuprebase = always
 [color]
 	ui = true
 [rerere]
@@ -21,5 +23,17 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+    editor = nvim
+[diff]
+    tool = meld
 [include]
     path = ~/.gitconfig-work
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    graph = log --all --decorate --oneline --graph
+[format]
+    pretty = "%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
