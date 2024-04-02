@@ -1,6 +1,3 @@
-# Use vim bindings in zsh
-bindkey -v
-
 #############################################
 # Section for declaring path related env variables
 #############################################
