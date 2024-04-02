@@ -3,6 +3,8 @@ Cargo.locks
 
 node_modules/
 
+.config/rofi/.current-wallpaper
+
 # Ignore local DB files
 *.db
 *.db-*
