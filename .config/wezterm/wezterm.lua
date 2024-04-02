@@ -2,7 +2,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder and wezterm.config_builder() or {}
 
-config.default_prog = { "/usr/bin/tmux", "attach-session" }
+config.default_prog = { "tmux" }
 config.color_scheme = "ayu"
 config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "liga=1" }
