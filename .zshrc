@@ -154,6 +154,7 @@ alias tml="tmux list-sessions"
 alias tma="tmux attach-session"
 alias tmat="tmux attach-session -t"
 alias tmks="tmux kill-session -t"
+alias tmka="tmux kill-session -a"
 alias tmn="tmux new-session"
 
 # Misc aliases
