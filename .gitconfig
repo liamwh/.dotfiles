@@ -28,6 +28,7 @@
     path = ~/.gitconfig-work
 [alias]
     co = checkout
+    fomo = !git fetch origin main && git rebase origin/main --autostash
     br = branch
     ci = commit
     st = status
