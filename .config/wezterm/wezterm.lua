@@ -8,16 +8,16 @@ config.harfbuzz_features = { "liga=1" }
 
 local os_name = wezterm.target_triple
 if os_name:find("linux") then
-	config.enable_wayland = false
-	config.default_prog = { "tmux" }
+    config.enable_wayland = false
+    -- config.default_prog = { "tmux" }
 elseif os_name:find("windows") then
-	config.default_prog = { "wsl.exe" }
+    config.default_prog = { "wsl.exe" }
 elseif os_name:find("apple") then
-	config.default_prog = { "/opt/homebrew/bin/tmux" }
+    -- config.default_prog = { "/opt/homebrew/bin/tmux" }
 end
 
 config.keys = {
-	{ key = "Space", mods = "SHIFT", action = wezterm.action({ SendString = " " }) },
+    { key = "Space", mods = "SHIFT", action = wezterm.action({ SendString = " " }) },
 }
 config.use_dead_keys = false
 config.adjust_window_size_when_changing_font_size = false
