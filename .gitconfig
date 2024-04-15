@@ -12,6 +12,8 @@
     autosquash = true
 [branch]
     autosetuprebase = always
+[commit]
+    gpgsign = true
 [color]
 	ui = true
 [rerere]
