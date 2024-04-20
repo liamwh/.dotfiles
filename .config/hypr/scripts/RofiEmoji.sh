@@ -19,7 +19,7 @@ exit
 🙂 slightly smiling face face smile
 🙃 upside down face face flipped silly smile
 😉 winking face face happy mischievous secret ;) smile eye
-😊 smiling face with smiling eyes face smile happy flushed crush embarrassed shy joy
+😊 smiling face with smiling eyes face smile happy flushed crush embarrassed shy joy smiles
 😇 smiling face with halo face angel heaven halo
 🥰 smiling face with hearts face love like affection valentines infatuation crush hearts adore
 😍 smiling face with heart eyes face love like affection valentines infatuation crush heart
@@ -47,7 +47,7 @@ exit
 😏 smirking face face smile mean prank smug sarcasm
 😒 unamused face indifference bored straight face serious sarcasm unimpressed skeptical dubious side eye
 🙄 face with rolling eyes face eyeroll frustrated
-😬 grimacing face face grimace teeth
+😬 grimacing face face grimace teeth awkward
 🤥 lying face face lie pinocchio
 😌 relieved face face relaxed phew massage happiness
 😔 pensive face face sad depressed upset
@@ -186,7 +186,7 @@ exit
 👐 open hands fingers butterfly hands open
 🤲 palms up together hands gesture cupped prayer
 🤝 handshake agreement shake
-🙏 folded hands please hope wish namaste highfive pray
+🙏 folded hands please hope wish namaste highfive pray thank
 ✍️  writing hand lower left ballpoint pen stationery write compose
 💅 nail polish beauty manicure finger fashion nail
 🤳 selfie camera phone
