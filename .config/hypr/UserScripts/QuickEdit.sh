@@ -20,31 +20,31 @@ main() {
     choice=$(menu | rofi -dmenu -config ~/.config/rofi/config-compact.rasi | cut -d. -f1)
     case $choice in
         1)
-            kitty -e nano "$UserConfigs/ENVariables.conf"
+            wezterm start -- nvim "$UserConfigs/ENVariables.conf"
             ;;
         2)
-            kitty -e nano "$UserConfigs/WindowRules.conf"
+            wezterm start -- nvim "$UserConfigs/WindowRules.conf"
             ;;
         3)
-            kitty -e nano "$UserConfigs/Startup_Apps.conf"
+            wezterm start -- nvim "$UserConfigs/Startup_Apps.conf"
             ;;
         4)
-            kitty -e nano "$UserConfigs/UserKeybinds.conf"
+            wezterm start -- nvim "$UserConfigs/UserKeybinds.conf"
             ;;
         5)
-            kitty -e nano "$UserConfigs/Monitors.conf"
+            wezterm start -- nvim "$UserConfigs/Monitors.conf"
             ;;
         6)
-            kitty -e nano "$UserConfigs/Laptops.conf"
+            wezterm start -- nvim "$UserConfigs/Laptops.conf"
             ;;
         7)
-            kitty -e nano "$UserConfigs/UserSettings.conf"
+            wezterm start -- nvim "$UserConfigs/UserSettings.conf"
             ;;
         8)
-            kitty -e nano "$configs/Settings.conf"
+            wezterm start -- nvim "$configs/Settings.conf"
             ;;
         9)
-            kitty -e nano "$configs/Keybinds.conf"
+            wezterm start -- nvim "$configs/Keybinds.conf"
             ;;
         *)
             ;;
