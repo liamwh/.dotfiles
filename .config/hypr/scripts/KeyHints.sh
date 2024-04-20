@@ -38,7 +38,6 @@ yad --width=$dynamic_width --height=$dynamic_height \
     --column=Command: \
     --timeout-indicator=bottom \
 "ESC" "close this app" "" "=" "SUPER KEY (Windows Key)" "(SUPER KEY)" \
-" enter" "Terminal" "(kitty)" \
 " or  D" "App Launcher" "(rofi)" \
 " T" "Open File Manager" "(Thunar)" \
 " Q" "close active window" "(not kill)" \
@@ -73,3 +72,4 @@ yad --width=$dynamic_width --height=$dynamic_height \
 "More tips:" "https://github.com/JaKooLit/Hyprland-Dots/wiki" ""\
 
 # " Shift B" "Toggle Blur" "normal or less blur" \
+# " enter" "Terminal" "(kitty)" \
