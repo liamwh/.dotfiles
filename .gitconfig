@@ -3,6 +3,7 @@
 [user]
 	name = Liam Woodleigh-Hardinge
 	email = liam.woodleigh@gmail.com
+    signingkey = BF36F6F4D88647AA
 [push]
 	autoSetupRebase = always
 	default = current
@@ -12,8 +13,8 @@
     autosquash = true
 [branch]
     autosetuprebase = always
-[commit]
-    gpgsign = true
+; [commit]
+;     gpgsign = true
 [color]
 	ui = true
 [rerere]
