@@ -66,7 +66,7 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " SHIFT Z" "Zen mode. Enables or diables animations" "toggle" \
 " HYPERKEY+N" "Open or focus Notion" "" \
 " HYPERKEY+S" "Open or focus Wezterm" "" \
-" HYPERKEY+A" "Open or focus Chrome" "" \
+" HYPERKEY+A" "Open or focus the Browser" "" \
 " H" "Launch this app" "" \
 " E" "View or EDIT Keybinds, Settings, Monitor" "" \
 "" "" "" \
