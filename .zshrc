@@ -34,6 +34,11 @@ esac
 # Set up zsh configuration file location
 zstyle :compinstall filename "$HOME/.zshrc"
 
+# Electron hint for Linux
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+  export ELECTRON_OZONE_PLATFORM_HINT="wayland"
+fi
+
 #############################################
 # End of section for declaring path related env variables
 #############################################
