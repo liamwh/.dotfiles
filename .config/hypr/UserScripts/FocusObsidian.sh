@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CLIENT_NAME="Notion"
+CLIENT_NAME="obsidian"
 CLIENTS=$(hyprctl clients -j)
 
 # Make sure to wrap $CLIENT_NAME in double quotes inside the jq query
@@ -25,7 +25,7 @@ if [ "$NUM_WINDOWS" -gt 0 ]; then
         fi
     fi
 else
-    # Open a new instance of Notion if it's not open.
-    # /usr/bin/electron --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WaylandWindowDecorations /usr/lib/notion-app
-    notion-app
+    # Open a new instance of Obsidian if it's not open.
+    # /usr/lib/electron28/electron --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland /usr/lib/obsidian/app.asar
+    obsidian
 fi
