@@ -143,7 +143,6 @@ alias gpo="git push origin"
 alias gcm="git checkout main"
 
 # Npm aliases
-alias npm="pnpm"
 alias npx="pnpx"
 
 # Tmux aliases
