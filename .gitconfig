@@ -23,6 +23,7 @@
 	autocorrect = 1
 [credential]
 	helper = store
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [core]
 	autocrlf = input
 	safecrlf = true
@@ -39,3 +40,5 @@
     graph = log --all --decorate --oneline --graph
 [format]
     pretty = "%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
+[credential "https://dev.azure.com"]
+	useHttpPath = true
