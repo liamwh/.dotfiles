@@ -14,8 +14,14 @@ export GOPRIVATE=”dev.azure.com”
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 
-# OpenSSL (for MacOS)
-export OPENSSL_DIR="/opt/homebrew/opt/openssl@3"
+# OpenSSL
+if [[ "$(uname)" == "Darwin" ]]; then
+    # macOS system detected
+    export OPENSSL_DIR="/opt/homebrew/opt/openssl@3"
+elif [[ -f "/etc/arch-release" ]]; then
+    # Arch Linux system detected
+    export OPENSSL_DIR="/usr"
+fi
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
