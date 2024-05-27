@@ -119,6 +119,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-vi-mode
 )
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 #############################################
 # End of oh my zsh plugins section
 #############################################
