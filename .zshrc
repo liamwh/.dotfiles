@@ -121,6 +121,7 @@ plugins=(
     git
     macos
     docker
+    kubectl
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-vi-mode
