@@ -121,6 +121,7 @@ plugins=(
     git
     macos
     docker
+    docker-compose
     kubectl
     zsh-autosuggestions
     zsh-syntax-highlighting
