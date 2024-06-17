@@ -44,7 +44,6 @@ export WASMER_DIR="$HOME/.wasmer"
 if [[ "$(uname)" == "Darwin" ]]; then
     # macOS system detected
     export OPENSSL_DIR="/opt/homebrew/opt/openssl@3"
-    zinit snippet OMZP::macos
 elif [[ -f "/etc/arch-release" ]]; then
     # Arch Linux system detected
     export OPENSSL_DIR="/usr"
