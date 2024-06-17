@@ -152,11 +152,11 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Source other zsh files
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-eval "$(direnv hook zsh)"
-eval "$(atuin init zsh)"
-eval "$(starship init zsh)"
+source <(fzf --zsh)
+source <(zoxide init zsh)
+source <(direnv hook zsh)
+source <(atuin init zsh)
+source <(starship init zsh)
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
