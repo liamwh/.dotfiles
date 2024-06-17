@@ -26,7 +26,6 @@ zinit light djui/alias-tips
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::docker-compose
-zinit snippet OMZP::archlinux
 zinit snippet OMZP::aws
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
@@ -47,6 +46,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 elif [[ -f "/etc/arch-release" ]]; then
     # Arch Linux system detected
     export OPENSSL_DIR="/usr"
+    zinit snippet OMZP::archlinux
 fi
 
 # Node Version Manager
