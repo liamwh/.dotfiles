@@ -13,6 +13,9 @@ if os_name:find("linux") then
 elseif os_name:find("windows") then
 	config.default_prog = { "wsl.exe" }
 elseif os_name:find("apple") then
+	config.set_environment_variables = {
+		PATH = os.getenv("PATH") .. ":/opt/homebrew/bin",
+	}
 	config.default_prog = { "zellij" }
 end
 
