@@ -71,6 +71,9 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
   export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 fi
 
+# Exclude alias reminder for nvim
+export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vim"
+
 #############################################
 # End of section for declaring path related env variables
 #############################################
