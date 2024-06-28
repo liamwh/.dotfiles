@@ -28,6 +28,7 @@
 	autocrlf = input
 	safecrlf = true
     editor = nvim
+    pager = delta
 [include]
     path = ~/.gitconfig-work
 [alias]
@@ -42,3 +43,21 @@
     pretty = "%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = false
+    line-numbers = true
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
