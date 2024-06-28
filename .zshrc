@@ -101,6 +101,7 @@ add_to_path_if_not_exists "/home/linuxbrew/.linuxbrew/Cellar/surreal/1.1.1/bin"
 add_to_path_if_not_exists "/var/lib/snapd/snap/bin"
 add_to_path_if_not_exists "$GOPATH/bin"
 add_to_path_if_not_exists "/opt/homebrew/opt/mysql-client/bin"
+add_to_path_if_not_exists "~/.nix-profile/bin"
 
 #############################################
 # End of add directories to PATH section
