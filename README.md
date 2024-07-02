@@ -18,6 +18,7 @@ Run `just stow` or `stow .` to symlink all the dotfiles to your home directory.
   - [Oh My Zsh!](https://ohmyz.sh/) (Zsh Configuration Manager)
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) (Search Tool)
 - [fzf](https://github.com/junegunn/fzf) (CLI fuzzy finder)
+- [zoxide](https://github.com/ajeetdsouza/zoxide) (Smarter CD Command)
 
 ### Linux (i use Arch btw)
 
