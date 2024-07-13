@@ -19,6 +19,7 @@ Run `just stow` or `stow .` to symlink all the dotfiles to your home directory.
 - [Zsh](https://www.zsh.org/) - Shell
   - [zinit](https://github.com/zdharma-continuum/zinit) - Flexible and fast ZSH plugin manager
 - [Starship](https://starship.rs/) - Shell Prompt
+- [Atuin](https://atuin.sh/) - Shell History Manager
 
 ### CLI Tools
 
