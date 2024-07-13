@@ -200,6 +200,7 @@ alias ls="eza"
 alias l="eza -la --icons --git"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias vim="nvim"
+alias v="nvim"
 alias cat="bat -p"
 alias t="terraform"
 
