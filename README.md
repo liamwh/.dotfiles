@@ -23,13 +23,18 @@ Run `just stow` or `stow .` to symlink all the dotfiles to your home directory.
 
 ### CLI Tools
 
+- [lazygit](https://github.com/BurntSushi/ripgrep) - A simple terminal UI for git commands
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern while respecting your gitignore
 - [fzf](https://github.com/junegunn/fzf) - CLI fuzzy finder
 - [zoxide](https://github.com/ajeetdsouza/zoxide) - Smarter CD Command
-- [fx](https://github.com/antonmedv/fx) - Terminal JSON viewer & processor
 - [bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings
+- [fx](https://github.com/antonmedv/fx) - Terminal JSON viewer & processor
 - [yh](https://github.com/andreazorzetto/yh) - YAML syntax highlighter to bring colours to kubectl output
 - [delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, grep, and blame output
+- [eza](https://eza.rocks/) - A modern, maintained replacement for ls
+- [glow](https://github.com/charmbracelet/glow) - Render markdown on the CLI, with pizzazz!
+- [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'
+- [dysk](https://dystroy.org/dysk/) - dysk is a linux utility listing your filesystems.
 
 ### Linux (i use Arch btw)
 
