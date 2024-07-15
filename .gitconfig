@@ -53,7 +53,7 @@
     line-numbers = true
 
     # delta detects terminal colors automatically; set one of these to disable auto-detection
-    # dark = true
+    dark = true
     # light = true
 
 [merge]
