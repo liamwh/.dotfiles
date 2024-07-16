@@ -29,48 +29,48 @@ dynamic_width=$(($dynamic_width > $max_width ? $max_width : $dynamic_width))
 dynamic_height=$(($dynamic_height > $max_height ? $max_height : $dynamic_height))
 # Launch yad with calculated width and height
 yad --width=$dynamic_width --height=$dynamic_height \
-	--center \
-	--title="Keybindings" \
-	--no-buttons \
-	--list \
-	--column=Key: \
-	--column=Description: \
-	--column=Command: \
-	--timeout-indicator=bottom \
-	"ESC" "close this app" "" "=" "SUPER KEY (Windows Key)" "(SUPER KEY)" \
-	" or  D" "App Launcher" "(rofi)" \
-	" T" "Open File Manager" "(Thunar)" \
-	" Q" "close active window" "(not kill)" \
-	" Shift Q " "closes a specified window" "(window)" \
-	" Alt V" "Clipboard Manager" "(cliphist)" \
-	" W" "Choose wallpaper" "(Wallpaper Menu)" \
-	"CTRL ALT W" "Random wallpaper" "(via swww)" \
-	" B" "Hide/UnHide Waybar" "waybar" \
-	" CTRL B" "Choose waybar styles" "(waybar styles)" \
-	" ALT B" "Choose waybar layout" "(waybar layout)" \
-	" ALT R" "Reload Waybar swaync Rofi" "CHECK NOTIFICATION FIRST!!!" \
-	" SHIFT N" "Launch Notification Panel" "swaync Notification Center" \
-	" Print" "screenshot" "(grim)" \
-	" Shift Print" "screenshot region" "(grim + slurp)" \
-	" Shift S" "screenshot region" "(swappy)" \
-	"ALT Print" "Screenshot active window" "active window only" \
-	"CTRL ALT P" "power-menu" "(wlogout)" \
-	" P" "Toggle Mirroring of Monitor" "(wlogout)" \
-	" L" "screen lock" "(swaylock)" \
-	"CTRL ALT Del" "Hyprland Exit" "(SAVE YOUR WORK!!!)" \
-	" F" "Fullscreen" "Toggles to full screen" \
-	" ALT L" "Toggle Dwindle | Master Layout" "Hyprland Layout" \
-	" Shift F" "Toggle float" "single window" \
-	" ALT F" "Toggle all windows to float" "all windows" \
-	" ALT E" "Emoji Picker" "rofi emoji" \
-	" SHIFT Z" "Zen mode. Enables or diables animations" "toggle" \
-	" HYPERKEY+N" "Open or focus Notion" "" \
-	" HYPERKEY+S" "Open or focus Wezterm" "" \
-	" HYPERKEY+A" "Open or focus the Browser" "" \
-	" H" "Launch this app" "" \
-	" E" "View or EDIT Keybinds, Settings, Monitor" "" \
-	"" "" "" \
-	"More tips:" "https://github.com/JaKooLit/Hyprland-Dots/wiki" ""
+    --center \
+    --title="Keybindings" \
+    --no-buttons \
+    --list \
+    --column=Key: \
+    --column=Description: \
+    --column=Command: \
+    --timeout-indicator=bottom \
+    "ESC" "close this app" "" "=" "SUPER KEY (Windows Key)" "(SUPER KEY)" \
+    " or  D" "App Launcher" "(rofi)" \
+    " T" "Open File Manager" "(Thunar)" \
+    " Q" "close active window" "(not kill)" \
+    " Shift Q " "closes a specified window" "(window)" \
+    " Alt V" "Clipboard Manager" "(cliphist)" \
+    " W" "Choose wallpaper" "(Wallpaper Menu)" \
+    "CTRL ALT W" "Random wallpaper" "(via swww)" \
+    " B" "Hide/UnHide Waybar" "waybar" \
+    " CTRL B" "Choose waybar styles" "(waybar styles)" \
+    " ALT B" "Choose waybar layout" "(waybar layout)" \
+    " ALT R" "Reload Waybar swaync Rofi" "CHECK NOTIFICATION FIRST!!!" \
+    " SHIFT N" "Launch Notification Panel" "swaync Notification Center" \
+    " Print" "screenshot" "(grim)" \
+    " Shift Print" "screenshot region" "(grim + slurp)" \
+    " Shift S" "screenshot region" "(swappy)" \
+    "ALT Print" "Screenshot active window" "active window only" \
+    "CTRL ALT P" "power-menu" "(wlogout)" \
+    " P" "Toggle Mirroring of Monitor" "(wlogout)" \
+    " L" "screen lock" "(hyprlock)" \
+    "CTRL ALT Del" "Hyprland Exit" "(SAVE YOUR WORK!!!)" \
+    " F" "Fullscreen" "Toggles to full screen" \
+    " ALT L" "Toggle Dwindle | Master Layout" "Hyprland Layout" \
+    " Shift F" "Toggle float" "single window" \
+    " ALT F" "Toggle all windows to float" "all windows" \
+    " ALT E" "Emoji Picker" "rofi emoji" \
+    " SHIFT Z" "Zen mode. Enables or diables animations" "toggle" \
+    " HYPERKEY+N" "Open or focus Notion" "" \
+    " HYPERKEY+S" "Open or focus Wezterm" "" \
+    " HYPERKEY+A" "Open or focus the Browser" "" \
+    " H" "Launch this app" "" \
+    " E" "View or EDIT Keybinds, Settings, Monitor" "" \
+    "" "" "" \
+    "More tips:" "https://github.com/JaKooLit/Hyprland-Dots/wiki" ""
 
 # " Shift B" "Toggle Blur" "normal or less blur" \
 # " enter" "Terminal" "(kitty)" \
