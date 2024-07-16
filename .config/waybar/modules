@@ -503,13 +503,12 @@
         "on-click": "~/.config/hypr/scripts/SwitchKeyboardLayout.sh",
     },
     "custom/light_dark": {
-        "format": "{}",
-        "exec": "echo ; echo 󰔎 Dark-Light switcher",
+        "format": "󰔎",
         "on-click": "~/.config/hypr/scripts/DarkLight.sh",
         "on-click-right": "~/.config/hypr/scripts/WaybarStyles.sh",
-        "on-click-middle": "~/.config/hypr/scripts/Wallpaper.sh",
-        "interval": 86400, // once every day
-        "tooltip": true
+        "on-click-middle": "~/.config/hypr/UserScripts/WallpaperSelect.sh",
+        "tooltip": true,
+        "tooltip-format": "Left Click: Switch Dark-Light Themes\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Styles Menu",
     },
     "custom/lock": {
         "format": "󰌾{}",
