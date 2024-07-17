@@ -204,6 +204,10 @@ alias v="nvim"
 alias cat="bat -p"
 alias t="terraform"
 
+# Wasm Component Artifact Quick Sharing
+alias uuid="uuid=$(uuidgen | tr '[:upper:][:lower:]' '[:lower:][:upper:]' | tr -d '\n')"
+alias wpttl="wash push ttl.sh/${uuid}:1h"
+
 #############################################
 # End of Aliases section
 #############################################
