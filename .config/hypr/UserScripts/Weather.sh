@@ -2,7 +2,7 @@
 
 city=
 cachedir=~/.cache/rbn
-cachefile=${0#*/}-$1
+cachefile=${0##*/}-$1
 
 if [ ! -d $cachedir ]; then
     mkdir -p $cachedir
@@ -32,10 +32,10 @@ IFS=$SAVEIFS
 
 temperature=$(echo ${weather[2]} | sed -E 's/([[:digit:]]+)\.\./\1 to /g')
 
-#echo ${weather[1]#*,}
+#echo ${weather[1]##*,}
 
 # https://fontawesome.com/icons?s=solid&c=weather
-case $(echo ${weather[1]#*,} | tr '[:upper:]' '[:lower:]') in
+case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:]') in
 "clear" | "sunny")
     condition=""
     ;;
@@ -78,3 +78,7 @@ esac
 #echo $temp $condition
 
 echo -e "{\"text\":\""$temperature $condition"\", \"alt\":\""${weather[0]}"\", \"tooltip\":\""${weather[0]}: $temperature ${weather[1]}"\"}"
+
+cached_weather=" $temperature  \n$condition ${weather[1]}"
+
+echo -e $cached_weather >  ~/.cache/.weather_cache
