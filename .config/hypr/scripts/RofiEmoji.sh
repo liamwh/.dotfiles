@@ -1,13 +1,13 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Rofi Emoticons. Not my own. Cant remember the source
 
-sed '1,/^## DATA ##$/d' $0 | 
-rofi -dmenu -config ~/.config/rofi/config-long.rasi| 
+sed '1,/^# # DATA # #$/d' $0 | 
+rofi -i -dmenu -config ~/.config/rofi/config-emoji.rasi| 
 cut -d ' ' -f 1 | tr -d '\n' | wl-copy
 
 exit
-## DATA ##
+# # DATA # #
 😀 grinning face face smile happy joy :D grin
 😃 grinning face with big eyes face happy joy haha :D :) smile funny
 😄 grinning face with smiling eyes face happy joy funny haha laugh like :D :) smile
@@ -19,7 +19,7 @@ exit
 🙂 slightly smiling face face smile
 🙃 upside down face face flipped silly smile
 😉 winking face face happy mischievous secret ;) smile eye
-😊 smiling face with smiling eyes face smile happy flushed crush embarrassed shy joy smiles
+😊 smiling face with smiling eyes face smile happy flushed crush embarrassed shy joy
 😇 smiling face with halo face angel heaven halo
 🥰 smiling face with hearts face love like affection valentines infatuation crush hearts adore
 😍 smiling face with heart eyes face love like affection valentines infatuation crush heart
@@ -47,7 +47,7 @@ exit
 😏 smirking face face smile mean prank smug sarcasm
 😒 unamused face indifference bored straight face serious sarcasm unimpressed skeptical dubious side eye
 🙄 face with rolling eyes face eyeroll frustrated
-😬 grimacing face face grimace teeth awkward
+😬 grimacing face face grimace teeth
 🤥 lying face face lie pinocchio
 😌 relieved face face relaxed phew massage happiness
 😔 pensive face face sad depressed upset
@@ -186,7 +186,7 @@ exit
 👐 open hands fingers butterfly hands open
 🤲 palms up together hands gesture cupped prayer
 🤝 handshake agreement shake
-🙏 folded hands please hope wish namaste highfive pray thank
+🙏 folded hands please hope wish namaste highfive pray
 ✍️  writing hand lower left ballpoint pen stationery write compose
 💅 nail polish beauty manicure finger fashion nail
 🤳 selfie camera phone

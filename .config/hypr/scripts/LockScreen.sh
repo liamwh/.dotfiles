@@ -1,2 +1,7 @@
 #!/bin/bash
-pidof hyprlock || hyprlock -q
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+
+# For Hyprlock
+
+pidof hyprlock || hyprlock -q 
+

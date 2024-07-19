@@ -1,8 +1,9 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Scripts for volume controls for audio and mic 
 
 iDIR="$HOME/.config/swaync/icons"
+sDIR="$HOME/.config/hypr/scripts"
 
 # Get Volume
 get_volume() {
@@ -34,23 +35,26 @@ notify_user() {
         notify-send -e -h string:x-canonical-private-synchronous:volume_notif -u low -i "$(get_icon)" "Volume: Muted"
     else
         notify-send -e -h int:value:"$(get_volume | sed 's/%//')" -h string:x-canonical-private-synchronous:volume_notif -u low -i "$(get_icon)" "Volume: $(get_volume)"
+        "$sDIR/Sounds.sh" --volume
     fi
 }
 
 # Increase Volume
 inc_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
-        pamixer -u && notify_user
+        toggle_mute
+    else
+        pamixer -i 5 --allow-boost --set-limit 150 && notify_user
     fi
-    pamixer -i 5 && notify_user
 }
 
 # Decrease Volume
 dec_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
-        pamixer -u && notify_user
+        toggle_mute
+    else
+        pamixer -d 5 && notify_user
     fi
-    pamixer -d 5 && notify_user
 }
 
 # Toggle Mute
@@ -100,17 +104,19 @@ notify_mic_user() {
 # Increase MIC Volume
 inc_mic_volume() {
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-        pamixer --default-source -u && notify_mic_user
+        toggle_mic
+    else
+        pamixer --default-source -i 5 && notify_mic_user
     fi
-    pamixer --default-source -i 5 && notify_mic_user
 }
 
 # Decrease MIC Volume
 dec_mic_volume() {
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-        pamixer --default-source -u && notify_mic_user
+        toggle-mic
+    else
+        pamixer --default-source -d 5 && notify_mic_user
     fi
-    pamixer --default-source -d 5 && notify_mic_user
 }
 
 # Execute accordingly
