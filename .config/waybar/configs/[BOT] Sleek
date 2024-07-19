@@ -14,34 +14,27 @@
 "modules-left": [
 	"custom/menu",
 	"custom/separator#blank_2",
-	"mpris", 
-	"hyprland/window"
+	"hyprland/workspaces",
+	"custom/separator#blank_2",
+	"mpris",
+	"tray"
 ],
 
-"modules-center": [		
-	"hyprland/workspaces"	
+"modules-center": [
+	"idle_inhibitor",
+	"custom/separator#blank",
+	"clock",
+	"custom/separator#blank",
+	"custom/swaync"
 ],
 		
 "modules-right": [
-	"tray",
-	"custom/swaync",
+	"hyprland/window",
+	"custom/separator#blank",
+	"custom/separator#blank", 
 	"pulseaudio",
-	"clock",
-	"custom/power"				
+	"custom/separator#blank",
+	"custom/power",					
 	],
 
-
-// Additional format / customize modules
-
-"custom/power": {
-	"format": " ",
-	"icon-size": 20,
-	"tooltip": false,
-},
-	
-"clock": {
-	//"format": "{:%I:%M %p - %d/%b}", //for AM/PM
-    "format": "{:%H:%M - %d/%b}", // 24H
-	"tooltip": false
-},
 }
