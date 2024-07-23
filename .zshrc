@@ -36,6 +36,9 @@ export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
 export GOPRIVATE="dev.azure.com"
 
+# EDITOR ENV var
+export EDITOR="nvim"
+
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 
