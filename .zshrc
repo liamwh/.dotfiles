@@ -192,7 +192,8 @@ alias tmka="tmux kill-session -a"
 alias tmn="tmux new-session"
 
 # Misc aliases
-alias lg="lazygit"
+alias lzg="lazygit"
+alias lzd="lazydocker"
 alias j="just"
 alias k="kubectl"
 alias ka="kubectl apply -k ."
