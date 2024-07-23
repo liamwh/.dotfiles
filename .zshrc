@@ -34,7 +34,7 @@ zinit snippet OMZP::command-not-found
 # Go vars
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
-export GOPRIVATE=”dev.azure.com”
+export GOPRIVATE="dev.azure.com"
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
