@@ -288,8 +288,8 @@
   "clock": {
     "interval": 1,
     //"format": " {:%I:%M %p}", // AM PM format
-    "format": " {:%H:%M   %Y, %d %B, %A}", // 24H
-    "format-alt": " {:%H:%M:%S}",
+    "format": " {:%H:%M |  %d/%m/%y}", // Numbers only
+    "format-alt": " {:%H:%M:%S   %A %d %B, %Y}", // Full text
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
@@ -604,7 +604,7 @@
     "tooltip": true,
     "tooltip-format": "Left Click: Rofi Menu\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Layout Menu",
   },
-  // This is a custom cava visualizer
+  // This is a custom cava (audio) visualizer
   "custom/cava_mviz": {
     "exec": "~/.config/hypr/scripts/WaybarCava.sh",
     "format": "{}",
