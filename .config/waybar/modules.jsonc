@@ -571,7 +571,7 @@
     "tooltip-format": "Left Click: Wallpaper Menu\nMiddle Click: Random wallpaper\nRight Click: Waybar Styles Menu",
   },
   "custom/hint": {
-    "format": "Keybind Help",
+    "format": "?",
     "on-click": "~/.config/hypr/scripts/KeyHints.sh",
     "tooltip": true,
     "tooltip-format": "󱧣 Quick Tips",
