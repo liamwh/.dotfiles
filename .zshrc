@@ -77,6 +77,9 @@ fi
 # Exclude alias reminder for nvim
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vim"
 
+# Nix
+export NIX_CONF_DIR="$HOME/.config/nix"
+
 #############################################
 # End of section for declaring path related env variables
 #############################################
