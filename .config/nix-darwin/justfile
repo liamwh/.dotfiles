@@ -1,0 +1,2 @@
+apply:
+    darwin-rebuild switch --flake ~/.dotfiles/.config/nix-darwin --show-trace
