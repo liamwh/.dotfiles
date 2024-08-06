@@ -97,7 +97,7 @@ add_to_path_if_not_exists() {
 
 add_to_path_if_not_exists "/usr/local/opt/libpq/bin"
 add_to_path_if_not_exists "/usr/local/bin"
-add_to_path_if_not_exists "/opt/homebrew/bin/"
+add_to_path_if_not_exists "/opt/homebrew/bin"
 add_to_path_if_not_exists "/home/linuxbrew/.linuxbrew/bin"
 add_to_path_if_not_exists "$HOME/.local/bin"
 add_to_path_if_not_exists "$HOME/go/bin"
