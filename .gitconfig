@@ -22,7 +22,7 @@
 [help]
 	autocorrect = 1
 [credential]
-	helper = git-credential-manager
+	helper = /usr/local/share/gcm-core/git-credential-manager
 	helper = store
 [core]
 	autocrlf = input
