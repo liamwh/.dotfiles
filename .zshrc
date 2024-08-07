@@ -80,6 +80,16 @@ export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vim"
 # Nix
 export NIX_CONF_DIR="$HOME/.config/nix"
 
+# Cargo & Rust
+if [[ -e ~/.cargo-target ]]; then
+    export CARGO_TARGET_DIR="$HOME/.cargo-target"
+fi
+export RUST_BACKTRACE=1
+
+# Personal
+export EMAIL="liam.woodleigh@gmail.com"
+export NAME="Liam Woodleigh-Hardinge"
+
 #############################################
 # End of section for declaring path related env variables
 #############################################
