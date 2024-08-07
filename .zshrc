@@ -66,9 +66,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# Set up zsh configuration file location
-zstyle :compinstall filename "$HOME/.zshrc"
-
 # Electron hint for Linux
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
   export ELECTRON_OZONE_PLATFORM_HINT="wayland"
@@ -93,6 +90,9 @@ export NAME="Liam Woodleigh-Hardinge"
 #############################################
 # End of section for declaring path related env variables
 #############################################
+
+# Set up zsh configuration file location
+zstyle :compinstall filename "$HOME/.zshrc"
 
 #############################################
 # Add directories to PATH
