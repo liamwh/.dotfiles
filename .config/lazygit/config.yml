@@ -1,4 +1,14 @@
+gui:
+  nerdFontsVersion: "3"
+  splitDiff: auto
+  windowSize: normal
+  border: rounded
+  mouseEvents: true
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never --syntax-theme base16-256 -s
+    pager: delta --dark --paging=never --syntax-theme base16-256
+  parseEmoji: true
+  autoFetch: true
+  autoRefresh: true
+  fetchAll: true
