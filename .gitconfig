@@ -6,19 +6,27 @@
     signingkey = BF36F6F4D88647AA
 [push]
 	autoSetupRebase = always
+	autoSetupRemote = true
+    updateRefs = true
 	default = current
+    useForceIfIncludes = true
+[fetch]
+    prune = true
 [pull]
     rebase = true
 [rebase]
     autosquash = true
+    autostash = true
 [branch]
     autosetuprebase = always
-; [commit]
-;     gpgsign = true
+[commit]
+    ; gpgsign = true
+    verbose = true
 [color]
 	ui = true
 [rerere]
 	enabled = true
+    autoupdate = true
 [help]
 	autocorrect = 1
 [credential]
@@ -39,6 +47,8 @@
     st = status
     last = log -1 HEAD
     graph = log --all --decorate --oneline --graph
+    accept-ours = "!f() { git checkout --ours -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+    accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
 [format]
     pretty = "%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 
@@ -47,7 +57,7 @@
 
 [delta]
     navigate = true    # use n and N to move between diff sections
-    side-by-side = false
+    side-by-side = true
     line-numbers = true
 
     # delta detects terminal colors automatically; set one of these to disable auto-detection
