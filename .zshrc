@@ -78,9 +78,9 @@ export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vim"
 export NIX_CONF_DIR="$HOME/.config/nix"
 
 # Cargo & Rust
-if [[ -e ~/.cargo-target ]]; then
-    export CARGO_TARGET_DIR="$HOME/.cargo-target"
-fi
+# if [[ -e ~/.cargo-target ]]; then
+export CARGO_TARGET_DIR="$HOME/.cargo-target"
+# fi
 export RUST_BACKTRACE=1
 
 # Personal
