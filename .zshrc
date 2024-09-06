@@ -226,6 +226,13 @@ alias b="bacon"
 alias uuid="uuid=$(uuidgen | tr '[:upper:][:lower:]' '[:lower:][:upper:]' | tr -d '\n')"
 alias wpttl='uuid && wash push -o json "ttl.sh/${uuid}:1h"'
 
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
 #############################################
 # End of Aliases section
 #############################################
@@ -241,4 +248,33 @@ function yy() {
 		cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
+# Function to change directory and list files
+cx() { cd "$@" && l; }
+
+# Find directory with fzf, cd into it, and list contents
+fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && l; }
+
+# Find file with fzf and copy path to clipboard
+f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
+
+# This shell function named fv uses fzf (a fuzzy finder) to interactively search for non-hidden files in the current directory and its subdirectories, then opens the selected file in Neovim.
+fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
+
+
+# `cwt` is a shell function for running Rust tests using `cargo watch`.
+# If one argument is given, it runs the specified test.
+# If two arguments are given, the second is passed to `cargo test`.
+# If no arguments are given, it runs all tests.
+# In all cases, it reruns tests on code changes and allows tests to print to the console.
+function cwt() {
+    if [[ $# -eq 1 ]]; then
+        cargo watch -q -c -x "test --test '$1' -- --nocapture"
+    elif [[ $# -eq 2 ]]; then
+        cargo watch -q -c -x "test --test '$1' '$2' -- --nocapture"
+    else
+        cargo watch -q -c -x "test -- --nocapture"
+    fi
 }
