@@ -8,7 +8,7 @@
 	autoSetupRebase = always
 	autoSetupRemote = true
     updateRefs = true
-	default = current
+	default = simple
     useForceIfIncludes = true
 [fetch]
     prune = true
