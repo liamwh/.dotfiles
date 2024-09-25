@@ -113,11 +113,11 @@ add_to_path_if_not_exists "$HOME/.local/bin"
 add_to_path_if_not_exists "$HOME/go/bin"
 add_to_path_if_not_exists "$HOME/.cargo/bin"
 add_to_path_if_not_exists "$HOME/.fly/bin"
-add_to_path_if_not_exists "/home/linuxbrew/.linuxbrew/Cellar/surreal/1.1.1/bin"
 add_to_path_if_not_exists "/var/lib/snapd/snap/bin"
 add_to_path_if_not_exists "$GOPATH/bin"
 add_to_path_if_not_exists "/opt/homebrew/opt/mysql-client/bin"
-add_to_path_if_not_exists "~/.nix-profile/bin"
+add_to_path_if_not_exists "$HOME/.nix-profile/bin"
+add_to_path_if_not_exists "$HOME/.surrealdb"
 
 #############################################
 # End of add directories to PATH section
