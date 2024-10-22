@@ -12,3 +12,5 @@ git:
   autoFetch: true
   autoRefresh: true
   fetchAll: true
+os:
+  editPreset: "vscode"
