@@ -221,6 +221,7 @@ alias v="nvim"
 alias cat="bat -p"
 alias t="terraform"
 alias b="bacon"
+alias c="cursor ."
 
 # Wasm Component Artifact Quick Sharing
 alias uuid="uuid=$(uuidgen | tr '[:upper:][:lower:]' '[:lower:][:upper:]' | tr -d '\n')"
@@ -278,3 +279,5 @@ function cwt() {
         cargo watch -q -c -x "test -- --nocapture"
     fi
 }
+
+[ -f "/$HOME/.ghcup/env" ] && . "/$HOME/.ghcup/env" # ghcup-env
