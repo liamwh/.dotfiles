@@ -223,6 +223,10 @@ alias t="terraform"
 alias b="bacon"
 alias c="cursor ."
 
+function port-process-kill() {
+    sudo fuser -k $1/tcp
+}
+
 # Wasm Component Artifact Quick Sharing
 alias uuid="uuid=$(uuidgen | tr '[:upper:][:lower:]' '[:lower:][:upper:]' | tr -d '\n')"
 alias wpttl='uuid && wash push -o json "ttl.sh/${uuid}:1h"'
