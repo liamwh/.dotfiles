@@ -2,9 +2,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder and wezterm.config_builder() or {}
 
-config.color_scheme = "ayu"
 config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "liga=1" }
+config.color_scheme = "Dracula"
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
 
 local os_name = wezterm.target_triple
 if os_name:find("linux") then
