@@ -20,12 +20,6 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
-    "key": "space g g",
-    "command": "workbench.action.tasks.runTask",
-    "args": "Open Lazygit (Maximised)",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
-  },
-  {
     "key": "ctrl+/",
     "command": "workbench.action.terminal.toggleTerminal"
   },
@@ -129,4 +123,3 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   }
 ]
-
