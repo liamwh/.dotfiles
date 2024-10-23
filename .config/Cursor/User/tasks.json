@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open Lazygit",
+            "type": "shell",
+            "command": "lazygit",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Lazygit (Maximised)",
+            "type": "shell",
+            "command": "lazygit",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true,
+                "clear": true
+            },
+            "problemMatcher": [],
+            "isBackground": true
+        }
+    ]
+}

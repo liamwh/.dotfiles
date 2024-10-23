@@ -1,0 +1,132 @@
+[
+  {
+    "key": "space ,",
+    "command": "workbench.action.showAllEditors",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space b b",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space /",
+    "command": "workbench.action.findInFiles",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space g g",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Open Lazygit (Maximised)",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "space b d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && !sideBarVisible"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible"
+  },
+  {
+    "key": "space f m",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space s s",
+    "command": "workbench.action.showAllSymbols",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "space c a",
+    "command": "editor.action.quickFix",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space -",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space w d",
+    "command": "workbench.action.closeEditorsInGroup",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "workbench.actions.view.toggleProblems"
+  },
+  {
+    "args": "<C-d>",
+    "command": "vscode-neovim.send",
+    "key": "ctrl+d",
+    "when": "editorFocus && neovim.init"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "space g g",
+    "command": "lazygit-vscode.toggle",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space c r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && !editorReadonly"
+  },
+  {
+    "key": "space g r",
+    "command": "editor.action.referenceSearch.trigger",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space t s",
+    "command": "workbench.view.testing.focus",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  }
+]
+

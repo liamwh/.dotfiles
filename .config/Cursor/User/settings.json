@@ -1,0 +1,71 @@
+{
+    "update.mode": "none",
+    "redhat.telemetry.enabled": false,
+    "editor.matchBrackets": "never",
+    "vsicons.dontShowNewVersionMessage": true,
+    "svelte.enable-ts-plugin": true,
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.colorTheme": "Dracula Theme",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "files.trimTrailingWhitespace": true,
+    "editor.wordWrap": "on",
+    "gitlens.currentLine.enabled": false,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontLigatures": true,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "git.autofetch": true,
+    "window.customTitleBarVisibility": "windowed",
+    "vscode-neovim.compositeKeys": {},
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "breadcrumbs.enabled": true,
+    "editor.stickyScroll.enabled": true,
+    "sync.gist": "b9bb0433864eec736ef5581a8b1f812c",
+    "sync.autoUpload": true,
+    "sync.quietSync": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "rainbowTags.supportedLanguages": [
+        "html",
+        "xml",
+        "vue",
+        "typescript",
+        "javascript",
+        "svelte"
+    ],
+    "rainbowTags.allowEverywhere": true,
+    "rainbowTags.colors": [
+        "#E0B0FF", // Light Lavender (for large block elements)
+        "#D8BFD8", // Thistle (for large block elements)
+        "#DDA0DD", // Plum (for medium elements)
+        "#DA70D6", // Orchid (for medium elements)
+        "#BA55D3", // Medium Orchid (for inline elements)
+        "#B19CD9", // Light Purple (for strong tags)
+        "#9370DB" // Medium Purple (for inline elements)
+    ],
+    "editor.lineNumbers": "relative",
+    "editor.renderFinalNewline": "off",
+    "editor.cursorSurroundingLines": 8,
+    "git.confirmSync": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "makefile.configureOnOpen": true,
+    "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "haskell.manageHLS": "GHCup",
+    "cursor.cpp.disabledLanguages": [
+        "haskell"
+    ]
+}
