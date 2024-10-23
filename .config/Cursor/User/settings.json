@@ -67,5 +67,6 @@
     "haskell.manageHLS": "GHCup",
     "cursor.cpp.disabledLanguages": [
         "haskell"
-    ]
+    ],
+    "git.openRepositoryInParentFolders": "always"
 }

@@ -121,5 +121,10 @@
     "key": "space t s",
     "command": "workbench.view.testing.focus",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space m p",
+    "command": "markdown.showPreviewToSide",
+    "when": "editorLangId == 'markdown'"
   }
 ]
