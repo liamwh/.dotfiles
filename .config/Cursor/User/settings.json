@@ -27,6 +27,7 @@
     "editor.guides.bracketPairs": true,
     "breadcrumbs.enabled": true,
     "editor.stickyScroll.enabled": true,
+    "editor.linkedEditing": true,
     "sync.gist": "b9bb0433864eec736ef5581a8b1f812c",
     "sync.autoUpload": true,
     "sync.quietSync": true,
