@@ -1,7 +1,6 @@
 {
     "update.mode": "none",
     "redhat.telemetry.enabled": false,
-    "editor.matchBrackets": "never",
     "vsicons.dontShowNewVersionMessage": true,
     "svelte.enable-ts-plugin": true,
     "go.toolsManagement.autoUpdate": true,
@@ -25,13 +24,14 @@
     "git.autofetch": true,
     "window.customTitleBarVisibility": "windowed",
     "vscode-neovim.compositeKeys": {},
-    "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
     "breadcrumbs.enabled": true,
     "editor.stickyScroll.enabled": true,
     "sync.gist": "b9bb0433864eec736ef5581a8b1f812c",
     "sync.autoUpload": true,
     "sync.quietSync": true,
+    "editor.matchBrackets": "always",
+    "editor.bracketPairColorization.enabled": true,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "rainbowTags.supportedLanguages": [
         "html",
