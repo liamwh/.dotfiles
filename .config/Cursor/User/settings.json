@@ -16,12 +16,10 @@
     ],
     "files.trimTrailingWhitespace": true,
     "editor.wordWrap": "on",
-    "gitlens.currentLine.enabled": false,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.fontLigatures": true,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "git.autofetch": true,
     "window.customTitleBarVisibility": "windowed",
     "vscode-neovim.compositeKeys": {},
     "editor.guides.bracketPairs": true,
@@ -55,7 +53,11 @@
     "editor.lineNumbers": "relative",
     "editor.renderFinalNewline": "off",
     "editor.cursorSurroundingLines": 8,
+    // Git settings
+    "git.autofetch": true,
     "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    "gitlens.currentLine.enabled": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -69,6 +71,26 @@
     "cursor.cpp.disabledLanguages": [
         "haskell"
     ],
-    "git.openRepositoryInParentFolders": "always",
-    "workbench.activityBar.orientation": "vertical"
+    "workbench.activityBar.orientation": "vertical",
+    "cSpell.userWords": [
+        "autofetch",
+        "golangci",
+        "neovim",
+        "vsicons"
+    ],
+    "cSpell.language": "en-GB,en,nl",
+    "cSpell.enableFiletypes": [
+        "!json"
+    ],
+    "cSpell.languageSettings": [
+        {
+            "languageId": "json",
+            "enabled": false
+        },
+        {
+            "languageId": "jsonc",
+            "enabled": false
+        }
+    ],
+    "workbench.iconTheme": "vscode-icons"
 }
