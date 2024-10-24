@@ -68,5 +68,6 @@
     "cursor.cpp.disabledLanguages": [
         "haskell"
     ],
-    "git.openRepositoryInParentFolders": "always"
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.activityBar.orientation": "vertical"
 }
