@@ -10,6 +10,11 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "!editorTextFocus && neovim.mode == normal"
+  },
+  {
     "key": "space b b",
     "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
