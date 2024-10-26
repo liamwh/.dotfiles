@@ -12,7 +12,7 @@
   {
     "key": "space space",
     "command": "workbench.action.quickOpen",
-    "when": "!editorTextFocus && neovim.mode == normal"
+    "when": "!editorTextFocus && neovim.mode == normal && !sideBarFocus && !inputFocus && !inQuickOpen"
   },
   {
     "key": "space b b",
@@ -135,11 +135,11 @@
   {
     "key": "space s o",
     "command": "outline.focus",
-    "when": "!outline.focus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
     "key": "space s o",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible"
+    "when": "sideBarVisible && outline.focus"
   }
 ]
