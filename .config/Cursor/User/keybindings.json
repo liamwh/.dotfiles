@@ -20,6 +20,11 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
+    "key": "space b b",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && !inputFocus"
+  },
+  {
     "key": "space /",
     "command": "workbench.action.findInFiles",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
@@ -45,7 +50,7 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible"
+    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible && !inputFocus"
   },
   {
     "key": "space f m",
