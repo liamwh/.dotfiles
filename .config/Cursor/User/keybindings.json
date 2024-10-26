@@ -125,6 +125,16 @@
   {
     "key": "space m p",
     "command": "markdown.showPreviewToSide",
-    "when": "editorLangId == 'markdown'"
+    "when": "editorLangId == 'markdown' && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space s o",
+    "command": "outline.focus",
+    "when": "!outline.focus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space s o",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible"
   }
 ]
