@@ -141,5 +141,25 @@
     "key": "space s o",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarVisible && outline.focus"
-  }
+  },
+  {
+    "key": "space u",
+    "command": "timeline.focus",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space u",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && timeline.active"
+  },
+  {
+    "key": "space t t",
+    "command": "todo-tree-view.focus",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space t t",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && todo-tree-view.active"
+  },
 ]
