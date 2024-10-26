@@ -92,5 +92,16 @@
             "enabled": false
         }
     ],
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "nix.serverPath": "nixd",
+    "nix.enableLanguageServer": true,
+    "nix.serverSettings": {
+        "nixd": {
+            "formatting": {
+                "command": [
+                    "nixpkgs-fmt"
+                ]
+            },
+        }
+    }
 }
