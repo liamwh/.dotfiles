@@ -50,7 +50,7 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible && !inputFocus"
+    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible"
   },
   {
     "key": "space f m",
@@ -145,7 +145,7 @@
   {
     "key": "space s o",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && outline.focus"
+    "when": "sideBarVisible && outline.focus && !inputFocus"
   },
   {
     "key": "space u",
@@ -155,7 +155,7 @@
   {
     "key": "space u",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && timeline.active"
+    "when": "sideBarVisible && timeline.active && !inputFocus"
   },
   {
     "key": "space t t",
@@ -165,6 +165,6 @@
   {
     "key": "space t t",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && todo-tree-view.active"
-  },
+    "when": "sideBarVisible && todo-tree-view.active && !inputFocus"
+  }
 ]
