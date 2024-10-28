@@ -49,6 +49,8 @@
     graph = log --all --decorate --oneline --graph
     accept-ours = "!f() { git checkout --ours -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
     accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+    recent = !git fetch origin && git for-each-ref --sort=-committerdate 'refs/heads' 'refs/remotes/origin' --format='%(committerdate:short) %(refname:short) (%(authorname))' --count 10
+    recent-remote = !git fetch origin && git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(committerdate:short) %(refname:short) (%(authorname))' --count 10
 [format]
     pretty = "%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 
