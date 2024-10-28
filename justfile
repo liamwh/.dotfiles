@@ -5,8 +5,11 @@
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 # Symlink all the dotfiles to your home directory
-stow:
+stow: dump
     stow .
 
 dump:
     brew bundle dump --file=./Brewfile --force
+
+clean-targets:
+    find ~/git -name target -exec rm -rf {} \;
