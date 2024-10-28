@@ -50,7 +50,7 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible"
+    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible && !inputFocus"
   },
   {
     "key": "space f m",
