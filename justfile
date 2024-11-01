@@ -13,3 +13,7 @@ dump:
 
 clean-targets:
     find ~/git -name target -exec rm -rf {} \;
+
+# Fixes the issue if my bluetooth headphones aren't playing the music but are connected to my computer.
+restart-pulseaudio:
+    systemctl --user restart pipewire pipewire-pulse
