@@ -1,5 +1,11 @@
 [
   {
+    "key": "space",
+    "command": "vscode-neovim.send",
+    "args": "<space>",
+    "when": "editorTextFocus && neovim.expectingKeys"
+  },
+  {
     "key": "space ,",
     "command": "workbench.action.showAllEditors",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
@@ -12,7 +18,7 @@
   {
     "key": "space space",
     "command": "workbench.action.quickOpen",
-    "when": "!editorTextFocus && neovim.mode == normal && !sideBarFocus && !inputFocus && !inQuickOpen"
+    "when": "!editorTextFocus && neovim.mode == normal && !sideBarFocus && !inputFocus && !inQuickOpen && !neovim.expectingKeys"
   },
   {
     "key": "space b b",
@@ -145,7 +151,7 @@
   {
     "key": "space s o",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && outline.focus && !inputFocus"
+    "when": "sideBarVisible && outline.focus && !inputFocus && !neovim.expectingKeys"
   },
   {
     "key": "space u",
@@ -155,7 +161,7 @@
   {
     "key": "space u",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && timeline.active && !inputFocus"
+    "when": "sideBarVisible && timeline.active && !inputFocus && !neovim.expectingKeys"
   },
   {
     "key": "space t t",
@@ -165,6 +171,6 @@
   {
     "key": "space t t",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && todo-tree-view.active && !inputFocus"
-  }
+    "when": "sideBarVisible && todo-tree-view.active && !inputFocus && !neovim.expectingKeys"
+  },
 ]
