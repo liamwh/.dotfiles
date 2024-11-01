@@ -4,7 +4,7 @@
     "vsicons.dontShowNewVersionMessage": true,
     "svelte.enable-ts-plugin": true,
     "go.toolsManagement.autoUpdate": true,
-    "workbench.colorTheme": "Dracula Theme",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
@@ -103,5 +103,9 @@
                 ]
             },
         }
-    }
+    },
+    "files.associations": {
+        ".cursorrules": "plaintext"
+    },
+    "sherlock.userId": "4069c10d-4f50-49d4-89f7-a373e002b3ea"
 }
