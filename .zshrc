@@ -118,6 +118,7 @@ add_to_path_if_not_exists "$GOPATH/bin"
 add_to_path_if_not_exists "/opt/homebrew/opt/mysql-client/bin"
 add_to_path_if_not_exists "$HOME/.nix-profile/bin"
 add_to_path_if_not_exists "$HOME/.surrealdb"
+add_to_path_if_not_exists "$HOME/.bun/bin"
 
 #############################################
 # End of add directories to PATH section
