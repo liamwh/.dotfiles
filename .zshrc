@@ -79,9 +79,9 @@ export NIX_CONF_DIR="$HOME/.config/nix"
 
 # Cargo & Rust
 # if [[ -e ~/.cargo-target ]]; then
-export CARGO_TARGET_DIR="$HOME/.cargo-target"
+# export CARGO_TARGET_DIR="$HOME/.cargo-target"
 # fi
-export RUST_BACKTRACE=1
+# export RUST_BACKTRACE=1
 
 # Personal
 export EMAIL="liam.woodleigh@gmail.com"
@@ -225,7 +225,20 @@ alias b="bacon"
 alias c="cursor ."
 
 function port-process-kill() {
-    sudo fuser -k $1/tcp
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS
+        local pids=($(lsof -ti tcp:$1))
+        if (( ${#pids[@]} > 0 )); then
+            for pid in "${pids[@]}"; do
+                kill -9 "$pid" 2>/dev/null && echo "Killed process $pid on port $1"
+            done
+        else
+            echo "No process found on port $1"
+        fi
+    else
+        # Linux
+        sudo fuser -k $1/tcp
+    fi
 }
 
 # Wasm Component Artifact Quick Sharing
