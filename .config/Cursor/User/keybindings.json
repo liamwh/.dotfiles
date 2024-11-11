@@ -159,6 +159,11 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
+    "key": "space f h",
+    "command": "timeline.focus",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
     "key": "space u",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarVisible && timeline.active && !inputFocus && !neovim.expectingKeys"
