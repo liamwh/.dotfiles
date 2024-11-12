@@ -299,3 +299,9 @@ function cwt() {
 }
 
 [ -f "/$HOME/.ghcup/env" ] && . "/$HOME/.ghcup/env" # ghcup-env
+
+
+# Workaround for https://techcommunity.microsoft.com/discussions/microsoftteams/weird-files-macos-download-folder/4053899
+if [[ "$(uname)" == "Darwin" ]]; then
+    rm -rf $HOME/Downloads/MSTeams/*.yuv
+fi
