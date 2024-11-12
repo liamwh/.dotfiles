@@ -302,8 +302,14 @@ function cwt() {
 
 
 # Workaround for https://techcommunity.microsoft.com/discussions/microsoftteams/weird-files-macos-download-folder/4053899
+# Deletes all .yuv files in the Downloads/MSTeams folder
 if [[ "$(uname)" == "Darwin" ]]; then
-    rm -rf $HOME/Downloads/MSTeams/*.yuv
+    setopt NULL_GLOB
+    files=($HOME/Downloads/MSTeams/*.yuv)
+    if (( ${#files[@]} > 0 )); then
+        rm -v "${files[@]}"
+    fi
+    unsetopt NULL_GLOB
 fi
 
 function clean-branches() {
