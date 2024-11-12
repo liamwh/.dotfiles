@@ -305,3 +305,39 @@ function cwt() {
 if [[ "$(uname)" == "Darwin" ]]; then
     rm -rf $HOME/Downloads/MSTeams/*.yuv
 fi
+
+function clean-branches() {
+    emulate -L zsh
+    setopt err_exit no_unset pipe_fail
+
+    # Get days argument, default to 7 if not provided
+    local days=${1:-7}
+    
+    echo "Cleaning branches older than $days days..."
+    
+    # Get list of remote branches
+    git fetch --prune
+    
+    # Find and remove stale branches
+    git branch -vv | \
+    awk '/: gone]/{print $1}' | \
+    while read -r branch; do
+        # Skip if branch is current or protected
+        if [[ $branch == "*" || $branch == "master" || $branch == "main" || $branch == "develop" ]]; then
+            echo "Skipping protected branch: $branch"
+            continue
+        fi
+        
+        # Check last commit date
+        local last_commit_date=$(git log -1 --format=%ct "$branch" 2>/dev/null || echo 0)
+        local current_date=$(date +%s)
+        local days_old=$(( (current_date - last_commit_date) / 86400 ))
+        
+        if (( days_old > days )); then
+            echo "Removing branch $branch (last commit $days_old days ago)"
+            git branch -D "$branch"
+        else
+            echo "Keeping branch $branch (last commit $days_old days ago - newer than $days days)"
+        fi
+    done
+}
