@@ -109,7 +109,7 @@
   },
   "sherlock.userId": "4069c10d-4f50-49d4-89f7-a373e002b3ea",
   "[typescript]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
+    "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[svelte]": {
