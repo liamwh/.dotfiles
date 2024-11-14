@@ -302,14 +302,16 @@ function cwt() {
 
 
 # Workaround for https://techcommunity.microsoft.com/discussions/microsoftteams/weird-files-macos-download-folder/4053899
-# Deletes all .yuv files in the Downloads/MSTeams folder
+# Deletes all .yuv files in the Downloads/MSTeams folder in the background
 if [[ "$(uname)" == "Darwin" ]]; then
-    setopt NULL_GLOB
-    files=($HOME/Downloads/MSTeams/*.yuv)
-    if (( ${#files[@]} > 0 )); then
-        rm -v "${files[@]}"
-    fi
-    unsetopt NULL_GLOB
+    {
+        setopt NULL_GLOB
+        files=($HOME/Downloads/MSTeams/*.yuv)
+        if (( ${#files[@]} > 0 )); then
+            rm -v "${files[@]}"
+        fi
+        unsetopt NULL_GLOB
+    } &!
 fi
 
 function clean-branches() {
@@ -346,4 +348,43 @@ function clean-branches() {
             echo "Keeping branch $branch (last commit $days_old days ago - newer than $days days)"
         fi
     done
+}
+
+function commits() {
+    git fetch --all
+    echo "Author                 Last Commit     Branch                          Commit Message"
+    echo "------------------------------------------------------------------------------------------"
+    
+    git log --all \
+        --format="%aN|%cr|%H|%s" \
+        --date-order | \
+        awk -F'|' '{
+            # Store first occurrence of each author with commit info
+            if (!seen[$1]) {
+                seen[$1] = 1
+                author = $1
+                time = $2
+                hash = $3
+                msg = $4
+                
+                # Get branch for this commit
+                cmd = "git branch -a --contains " hash " 2>/dev/null | grep -v HEAD | head -n1"
+                if ((cmd | getline branchline) > 0) {
+                    # Clean up the branch name
+                    gsub(/^[ *]+/, "", branchline)
+                    gsub(/remotes\/origin\//, "", branchline)
+                    branch = branchline
+                } else {
+                    branch = ""
+                }
+                close(cmd)
+                
+                # Format output
+                printf "%-20s %-15s %-30s %s\n",
+                    substr(author, 1, 20),
+                    substr(time, 1, 15),
+                    substr(branch, 1, 30),
+                    msg
+            }
+        }'
 }
