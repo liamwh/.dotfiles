@@ -1,13 +1,13 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds clear-defaults=true {
     normal {
-        bind "Alt x" { CloseFocus; SwitchToMode "Normal"; }
+        bind "Ctrl x" { CloseFocus; SwitchToMode "Normal"; }
     }
     locked {
-        bind "Alt g" { SwitchToMode "Normal"; }
+        bind "Ctrl g" { SwitchToMode "Normal"; }
     }
     resize {
-        bind "Alt r" { SwitchToMode "Normal"; }
+        bind "Ctrl r" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
         bind "k" "Up" { Resize "Increase Up"; }
@@ -20,7 +20,7 @@ keybinds clear-defaults=true {
         bind "-" { Resize "Decrease"; }
     }
     pane {
-        bind "Alt p" { SwitchToMode "Normal"; }
+        bind "Ctrl p" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
         bind "j" "Down" { MoveFocus "Down"; }
@@ -37,7 +37,7 @@ keybinds clear-defaults=true {
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
     move {
-        bind "Alt m" { SwitchToMode "Normal"; }
+        bind "Ctrl m" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
         bind "h" "Left" { MovePane "Left"; }
@@ -46,7 +46,7 @@ keybinds clear-defaults=true {
         bind "l" "Right" { MovePane "Right"; }
     }
     tab {
-        bind "Alt t" { SwitchToMode "Normal"; }
+        bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
@@ -68,26 +68,26 @@ keybinds clear-defaults=true {
         bind "Tab" { ToggleTab; }
     }
     scroll {
-        bind "Alt s" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "Alt f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        // bind "Ctrl c" { Copy; }
     }
     search {
-        bind "Alt s" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "Alt f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         bind "n" { Search "down"; }
@@ -109,8 +109,8 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Alt o" { SwitchToMode "Normal"; }
-        bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Ctrl o" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
@@ -144,43 +144,43 @@ keybinds clear-defaults=true {
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Alt g" { SwitchToMode "Locked"; }
-        bind "Alt q" { Quit; }
-        bind "Alt n" { NewPane; }
-        bind "Alt i" { MoveTab "Left"; }
-        bind "Alt o" { MoveTab "Right"; }
-        bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
-        bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
-        bind "Alt j" "Alt Down" { MoveFocus "Down"; }
-        bind "Alt k" "Alt Up" { MoveFocus "Up"; }
-        bind "Alt =" "Alt +" { Resize "Increase"; }
-        bind "Alt -" { Resize "Decrease"; }
-        bind "Alt [" { PreviousSwapLayout; }
-        bind "Alt ]" { NextSwapLayout; }
+        bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Ctrl q" { Quit; }
+        bind "Ctrl n" { NewPane; }
+        bind "Ctrl i" { MoveTab "Left"; }
+        bind "Ctrl o" { MoveTab "Right"; }
+        bind "Ctrl h" "Ctrl Left" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" "Ctrl Right" { MoveFocusOrTab "Right"; }
+        bind "Ctrl j" "Ctrl Down" { MoveFocus "Down"; }
+        bind "Ctrl k" "Ctrl Up" { MoveFocus "Up"; }
+        bind "Ctrl =" "Ctrl +" { Resize "Increase"; }
+        bind "Ctrl -" { Resize "Decrease"; }
+        bind "Ctrl [" { PreviousSwapLayout; }
+        bind "Ctrl ]" { NextSwapLayout; }
     }
     shared_except "normal" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
-        bind "Alt p" { SwitchToMode "Pane"; }
+        bind "Ctrl p" { SwitchToMode "Pane"; }
     }
     shared_except "resize" "locked" {
-        bind "Alt r" { SwitchToMode "Resize"; }
+        bind "Ctrl r" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Alt o" { SwitchToMode "Session"; }
+        bind "Ctrl o" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Alt t" { SwitchToMode "Tab"; }
+        bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
-        bind "Alt m" { SwitchToMode "Move"; }
+        bind "Ctrl m" { SwitchToMode "Move"; }
     }
     shared_except "tmux" "locked" {
-        bind "Alt b" { SwitchToMode "Tmux"; }
+        bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
 }
 
