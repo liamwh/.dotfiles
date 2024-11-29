@@ -22,6 +22,10 @@
       "title": "deepseek-coder-v2:16b"
     }
   ],
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text"
+  },
   "tabAutocompleteModel": {
     "model": "qwen2.5-coder:32b",
     "provider": "ollama",
