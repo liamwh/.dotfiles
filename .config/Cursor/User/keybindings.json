@@ -178,4 +178,8 @@
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarVisible && todo-tree-view.active && !inputFocus && !neovim.expectingKeys"
   },
+  {
+    "key": "cmd+r",
+    "command": "continue.newSession"
+  }
 ]

@@ -5,6 +5,16 @@ node_modules/
 
 .config/rofi/.current_wallpaper
 
+# Continue
+.continue/*
+!.continue/config.json
+
+# Cursor
+.config/Cursor/User/*
+!.config/Cursor/User/keybindings.json
+!.config/Cursor/User/settings.json
+!.config/Cursor/User/tasks.json
+
 # Ignore local DB files
 *.db
 *.db-*
