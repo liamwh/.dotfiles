@@ -7,14 +7,14 @@
     //   "title": "Claude 3.5 Sonnet"
     // }
     {
-      "model": "llama3.1:8b",
-      "provider": "ollama",
-      "title": "llama 3.1:8b"
-    },
-    {
       "model": "qwen2.5-coder:32b",
       "provider": "ollama",
       "title": "qwen2.5-coder:32b"
+    },
+    {
+      "model": "llama3.1:8b",
+      "provider": "ollama",
+      "title": "llama 3.1:8b"
     },
     {
       "model": "deepseek-coder-v2:16b",
