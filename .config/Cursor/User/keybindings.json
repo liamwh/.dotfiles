@@ -174,9 +174,18 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
-    "key": "space t t",
+    "key": "cmd+shift+e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && todo-tree-view.active && !inputFocus && !neovim.expectingKeys"
+    "when": "editorTextFocus || filesExplorerFocus"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "-workbench.action.quickchat.toggle",
+    "when": "chatIsEnabled"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "composer.openAsEditor"
   },
   {
     "key": "cmd+r",

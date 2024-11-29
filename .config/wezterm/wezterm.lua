@@ -23,6 +23,11 @@ end
 
 config.keys = {
 	{ key = "Space", mods = "SHIFT", action = wezterm.action({ SendString = " " }) },
+	{
+		key = "e",
+		mods = "SUPER|SHIFT",                       -- SUPER is CMD on macOS
+		action = wezterm.action.SendString("\x1b[13;5u"), -- This sends a special escape sequence
+	},
 }
 config.use_dead_keys = false
 config.adjust_window_size_when_changing_font_size = false

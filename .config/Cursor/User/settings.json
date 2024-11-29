@@ -109,9 +109,8 @@
   },
   "sherlock.userId": "4069c10d-4f50-49d4-89f7-a373e002b3ea",
   "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
@@ -125,205 +124,13 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  "rust-analyzer.testExplorer": true
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
-    "editor.formatOnSave": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "files.trimTrailingWhitespace": true,
-    "editor.wordWrap": "on",
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
-    "editor.fontLigatures": true,
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "window.customTitleBarVisibility": "windowed",
-    "vscode-neovim.compositeKeys": {},
-    "editor.guides.bracketPairs": true,
-    "breadcrumbs.enabled": true,
-    "editor.stickyScroll.enabled": true,
-    "editor.linkedEditing": true,
-    "sync.gist": "b9bb0433864eec736ef5581a8b1f812c",
-    "sync.autoUpload": true,
-    "sync.quietSync": true,
-    "editor.matchBrackets": "always",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "rainbowTags.supportedLanguages": [
-        "html",
-        "xml",
-        "vue",
-        "typescript",
-        "javascript",
-        "svelte"
-    ],
-    "rainbowTags.allowEverywhere": true,
-    "rainbowTags.colors": [
-        "#E0B0FF", // Light Lavender (for large block elements)
-        "#D8BFD8", // Thistle (for large block elements)
-        "#DDA0DD", // Plum (for medium elements)
-        "#DA70D6", // Orchid (for medium elements)
-        "#BA55D3", // Medium Orchid (for inline elements)
-        "#B19CD9", // Light Purple (for strong tags)
-        "#9370DB" // Medium Purple (for inline elements)
-    ],
-    "editor.lineNumbers": "relative",
-    "editor.renderFinalNewline": "off",
-    "editor.cursorSurroundingLines": 8,
-    // Git settings
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.openRepositoryInParentFolders": "always",
-    "gitlens.currentLine.enabled": false,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "makefile.configureOnOpen": true,
-    "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
-    "go.lintTool": "golangci-lint",
-    "go.lintFlags": [
-        "--fast"
-    ],
-    "haskell.manageHLS": "GHCup",
-    "cursor.cpp.disabledLanguages": [
-        "haskell"
-    ],
-    "workbench.activityBar.orientation": "vertical",
-    "cSpell.userWords": [
-        "autofetch",
-        "golangci",
-        "neovim",
-        "vsicons"
-    ],
-    "cSpell.language": "en-GB,en,nl",
-    "cSpell.enableFiletypes": [
-        "!json"
-    ],
-    "cSpell.languageSettings": [
-        {
-            "languageId": "json",
-            "enabled": false
-        },
-        {
-            "languageId": "jsonc",
-            "enabled": false
-        }
-    ],
-    "workbench.iconTheme": "vscode-icons",
-    "nix.serverPath": "nixd",
-    "nix.enableLanguageServer": true,
-    "nix.serverSettings": {
-        "nixd": {
-            "formatting": {
-                "command": [
-                    "nixpkgs-fmt"
-                ]
-            },
-        }
-    },
-    "files.associations": {
-        ".cursorrules": "plaintext"
-    },
-    "sherlock.userId": "4069c10d-4f50-49d4-89f7-a373e002b3ea"
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
-    "editor.formatOnSave": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "files.trimTrailingWhitespace": true,
-    "editor.wordWrap": "on",
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
-    "editor.fontLigatures": true,
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "window.customTitleBarVisibility": "windowed",
-    "vscode-neovim.compositeKeys": {},
-    "editor.guides.bracketPairs": true,
-    "breadcrumbs.enabled": true,
-    "editor.stickyScroll.enabled": true,
-    "editor.linkedEditing": true,
-    "sync.gist": "b9bb0433864eec736ef5581a8b1f812c",
-    "sync.autoUpload": true,
-    "sync.quietSync": true,
-    "editor.matchBrackets": "always",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "rainbowTags.supportedLanguages": [
-        "html",
-        "xml",
-        "vue",
-        "typescript",
-        "javascript",
-        "svelte"
-    ],
-    "rainbowTags.allowEverywhere": true,
-    "rainbowTags.colors": [
-        "#E0B0FF", // Light Lavender (for large block elements)
-        "#D8BFD8", // Thistle (for large block elements)
-        "#DDA0DD", // Plum (for medium elements)
-        "#DA70D6", // Orchid (for medium elements)
-        "#BA55D3", // Medium Orchid (for inline elements)
-        "#B19CD9", // Light Purple (for strong tags)
-        "#9370DB" // Medium Purple (for inline elements)
-    ],
-    "editor.lineNumbers": "relative",
-    "editor.renderFinalNewline": "off",
-    "editor.cursorSurroundingLines": 8,
-    // Git settings
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.openRepositoryInParentFolders": "always",
-    "gitlens.currentLine.enabled": false,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "makefile.configureOnOpen": true,
-    "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
-    "go.lintTool": "golangci-lint",
-    "go.lintFlags": [
-        "--fast"
-    ],
-    "haskell.manageHLS": "GHCup",
-    "cursor.cpp.disabledLanguages": [
-        "haskell"
-    ],
-    "workbench.activityBar.orientation": "vertical",
-    "cSpell.userWords": [
-        "autofetch",
-        "golangci",
-        "neovim",
-        "vsicons"
-    ],
-    "cSpell.language": "en-GB,en,nl",
-    "cSpell.enableFiletypes": [
-        "!json"
-    ],
-    "cSpell.languageSettings": [
-        {
-            "languageId": "json",
-            "enabled": false
-        },
-        {
-            "languageId": "jsonc",
-            "enabled": false
-        }
-    ],
-    "workbench.iconTheme": "vscode-icons",
-    "nix.serverPath": "nixd",
-    "nix.enableLanguageServer": true,
-    "nix.serverSettings": {
-        "nixd": {
-            "formatting": {
-                "command": [
-                    "nixpkgs-fmt"
-                ]
-            },
-        }
-    },
-    "files.associations": {
-        ".cursorrules": "plaintext"
-    },
-    "sherlock.userId": "4069c10d-4f50-49d4-89f7-a373e002b3ea",
-    "typescript.experimental.updateImportsOnPaste": true
+  "rust-analyzer.testExplorer": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "opa.dependency_paths.regal": "/Users/dt41nb/regal",
+  "opa.languageServers": [
+    "regal"
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

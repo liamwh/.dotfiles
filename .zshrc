@@ -83,6 +83,11 @@ export NIX_CONF_DIR="$HOME/.config/nix"
 # fi
 # export RUST_BACKTRACE=1
 
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PROTOC="/opt/homebrew/bin/protoc"
+fi
+
 # Personal
 export EMAIL="liam.woodleigh@gmail.com"
 export NAME="Liam Woodleigh-Hardinge"
