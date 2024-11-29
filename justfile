@@ -8,9 +8,9 @@ default:
 
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
-# Symlink all the dotfiles to your home directory
+# Symlink all the dotfiles to the home directory
 stow: && dump
-    stow .
+    stow . -v
 
 dump:
     brew bundle dump --file=./Brewfile --force
