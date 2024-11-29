@@ -12,6 +12,11 @@
       "title": "qwen2.5-coder:32b"
     },
     {
+      "model": "qwen2.5-coder:1.5b",
+      "provider": "ollama",
+      "title": "qwen2.5-coder:1.5b"
+    },
+    {
       "model": "llama3.1:8b",
       "provider": "ollama",
       "title": "llama 3.1:8b"
@@ -27,9 +32,9 @@
     "model": "nomic-embed-text"
   },
   "tabAutocompleteModel": {
-    "model": "qwen2.5-coder:32b",
+    "model": "qwen2.5-coder:1.5b",
     "provider": "ollama",
-    "title": "qwen2.5-coder:32b"
+    "title": "qwen2.5-coder:1.5b"
   },
   "customCommands": [
     {
