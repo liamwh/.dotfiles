@@ -1,11 +1,5 @@
 [
   {
-    "key": "space",
-    "command": "vscode-neovim.send",
-    "args": "<space>",
-    "when": "editorTextFocus && neovim.expectingKeys"
-  },
-  {
     "key": "space ,",
     "command": "workbench.action.showAllEditors",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
@@ -103,19 +97,19 @@
     "when": "editorFocus && neovim.init"
   },
   {
-    "key": "alt+h",
+    "key": "ctl+h",
     "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "alt+j",
+    "key": "ctl+j",
     "command": "workbench.action.navigateDown"
   },
   {
-    "key": "alt+k",
+    "key": "ctl+k",
     "command": "workbench.action.navigateUp"
   },
   {
-    "key": "alt+l",
+    "key": "ctl+l",
     "command": "workbench.action.navigateRight"
   },
   {
