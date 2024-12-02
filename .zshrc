@@ -274,6 +274,11 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+# Function to fuzzy find open windows using Aerospace on MacOS
+function ff() {
+    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
+}
+
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
 # Function to change directory and list files
 cx() { cd "$@" && l; }
@@ -325,12 +330,12 @@ function clean-branches() {
 
     # Get days argument, default to 7 if not provided
     local days=${1:-7}
-    
+
     echo "Cleaning branches older than $days days..."
-    
+
     # Get list of remote branches
     git fetch --prune
-    
+
     # Find and remove stale branches
     git branch -vv | \
     awk '/: gone]/{print $1}' | \
@@ -340,12 +345,12 @@ function clean-branches() {
             echo "Skipping protected branch: $branch"
             continue
         fi
-        
+
         # Check last commit date
         local last_commit_date=$(git log -1 --format=%ct "$branch" 2>/dev/null || echo 0)
         local current_date=$(date +%s)
         local days_old=$(( (current_date - last_commit_date) / 86400 ))
-        
+
         if (( days_old > days )); then
             echo "Removing branch $branch (last commit $days_old days ago)"
             git branch -D "$branch"
@@ -359,7 +364,7 @@ function commits() {
     git fetch --all
     echo "Author                 Last Commit     Branch                          Commit Message"
     echo "------------------------------------------------------------------------------------------"
-    
+
     git log --all \
         --format="%aN|%cr|%H|%s" \
         --date-order | \
@@ -371,7 +376,7 @@ function commits() {
                 time = $2
                 hash = $3
                 msg = $4
-                
+
                 # Get branch for this commit
                 cmd = "git branch -a --contains " hash " 2>/dev/null | grep -v HEAD | head -n1"
                 if ((cmd | getline branchline) > 0) {
@@ -383,7 +388,7 @@ function commits() {
                     branch = ""
                 }
                 close(cmd)
-                
+
                 # Format output
                 printf "%-20s %-15s %-30s %s\n",
                     substr(author, 1, 20),
@@ -393,3 +398,6 @@ function commits() {
             }
         }'
 }
+
+# Added by Windsurf
+export PATH="/Users/liam/.codeium/windsurf/bin:$PATH"
