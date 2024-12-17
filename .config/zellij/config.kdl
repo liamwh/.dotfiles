@@ -149,11 +149,11 @@ keybinds clear-defaults=true {
         bind "Ctrl n" { NewPane; }
         bind "Ctrl i" { MoveTab "Left"; }
         bind "Ctrl o" { MoveTab "Right"; }
-        bind "Ctrl h" "Ctrl Left" { MoveFocusOrTab "Left"; }
-        bind "Ctrl l" "Ctrl Right" { MoveFocusOrTab "Right"; }
-        bind "Ctrl j" "Ctrl Down" { MoveFocus "Down"; }
-        bind "Ctrl k" "Ctrl Up" { MoveFocus "Up"; }
-        bind "Ctrl =" "Ctrl +" { Resize "Increase"; }
+        bind "Ctrl h" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" { MoveFocusOrTab "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        bind "Ctrl =" { Resize "Increase"; }
         bind "Ctrl -" { Resize "Decrease"; }
         bind "Ctrl [" { PreviousSwapLayout; }
         bind "Ctrl ]" { NextSwapLayout; }
