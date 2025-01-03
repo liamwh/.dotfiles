@@ -30,3 +30,11 @@ sync-cursor:
         rm -rf ~/Library/Application\ Support/Cursor/User
         ln -s ~/.config/Cursor/User ~/Library/Application\ Support/Cursor/User
     fi
+
+# Exports all the npm global packages to a file, so we can import them later.
+export-npm-global-packages:
+    pnpm list -g --depth=0 --json | jq -r '.dependencies | keys | .[]' > global-packages.txt
+
+# Installs all the npm global packages from the file
+install-npm-global-packages:
+    cat global-packages.txt | xargs pnpm install -g
