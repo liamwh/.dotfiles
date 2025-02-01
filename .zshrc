@@ -401,3 +401,6 @@ function commits() {
 
 # Added by Windsurf
 export PATH="/Users/liam/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/liam/.lmstudio/bin"
