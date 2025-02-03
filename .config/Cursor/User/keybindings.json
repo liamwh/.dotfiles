@@ -162,6 +162,11 @@
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarVisible && timeline.active && !inputFocus && !neovim.expectingKeys"
   },
+  {
+    "key": "space s r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
   // {
   //   "key": "space t t",
   //   "command": "todo-tree-view.focus",
