@@ -176,6 +176,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt no_global_rcs # Don't load global zshrc files
 
 # Source other zsh files
 source <(fzf --zsh)
@@ -313,16 +314,27 @@ function cwt() {
 
 # Workaround for https://techcommunity.microsoft.com/discussions/microsoftteams/weird-files-macos-download-folder/4053899
 # Deletes all .yuv files in the Downloads/MSTeams folder in the background
-if [[ "$(uname)" == "Darwin" ]]; then
-    {
-        setopt NULL_GLOB
-        files=($HOME/Downloads/MSTeams/*.yuv)
-        if (( ${#files[@]} > 0 )); then
-            rm -v "${files[@]}"
+cleanup_teams_yuv() {
+    local silent=${1:-false}  # Default to non-silent mode
+
+    if [[ "$(uname)" == "Darwin" ]]; then
+        if [[ "$silent" == "true" ]]; then
+            (exec zsh -c '
+                setopt NULL_GLOB
+                rm -f $HOME/Downloads/MSTeams/*.yuv >/dev/null 2>&1
+                unsetopt NULL_GLOB
+            ' >/dev/null 2>&1 &)
+        else
+            (
+                setopt NULL_GLOB
+                rm -f $HOME/Downloads/MSTeams/*.yuv >/dev/null 2>&1
+                unsetopt NULL_GLOB
+            ) &
         fi
-        unsetopt NULL_GLOB
-    } &!
-fi
+    fi
+}
+cleanup_teams_yuv true
+
 
 function clean-branches() {
     emulate -L zsh
