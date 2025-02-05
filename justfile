@@ -41,3 +41,7 @@ export-npm-global-packages:
 # Installs all the npm global packages from the file
 install-npm-global-packages:
     cat global-packages.txt | xargs pnpm install -g
+
+# Create an alias for Docker Desktop
+alias-docker-desktop:
+    ln -s "/Applications/Docker.app/Contents/MacOS/Docker Desktop" "/Applications/Docker"
