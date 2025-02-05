@@ -1,16 +1,53 @@
 gui:
-  nerdFontsVersion: "3"
-  splitDiff: auto
-  windowSize: normal
-  border: rounded
-  mouseEvents: true
+    nerdFontsVersion: "3"
+    splitDiff: auto
+    screenMode: normal
+    border: rounded
+    mouseEvents: true
+    branchColorPatterns:
+        # Main branches
+        '^main$': '#2d5016'      # Dark green for main branch
+        '^develop$': '#00ffff'   # Cyan for develop branch
+
+        # Feature branches
+        '^feature/': '#87D96C'   # Green for feature branches
+        '^feat/': '#87D96C'      # Alternative prefix for features
+
+        # Release branches
+        '^release/': '#6600cc'   # Purple for release branches
+        '^rel/': '#6600cc'       # Alternative prefix for releases
+
+        # Hotfix branches
+        # '^hotfix/': '#cc0000'    # Red for urgent hotfixes
+        # '^fix/': '#cc0000'       # Alternative prefix for hotfixes
+        '^hotfix/': '#ff9900'    # Orange for urgent hotfixes
+        '^fix/': '#ff9900'       # Alternative prefix for hotfixes
+
+        # Documentation branches
+        '^docs?/': '#11aaff'     # Light blue for documentation
+
+        # Support branches
+        '^support/': '#ff9900'   # Orange for long-term support
+        '^maintain/': '#ff9900'  # Alternative prefix for maintenance
+
+        # Issue-related branches
+        'ISSUE-\d+': '#ff5733'   # Bright orange for issue references
+        'bug-\d+': '#ff0066'     # Pink for bug fixes
+
+        # Enhancement branches
+        '^enhance/': '#33cc33'   # Light green for enhancements
+        '^improvement/': '#33cc33' # Alternative prefix for improvements
+
+        # Experimental branches
+        '^exp/': '#c653c6'       # Purple for experimental features
+        '^poc/': '#c653c6'       # Proof of concept branches
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --syntax-theme base16-256
-  parseEmoji: true
-  autoFetch: true
-  autoRefresh: true
-  fetchAll: true
+    paging:
+        colorArg: always
+        pager: delta --dark --paging=never --syntax-theme base16-256
+    parseEmoji: true
+    autoFetch: true
+    autoRefresh: true
+    fetchAll: true
 os:
-  editPreset: "vscode"
+    editPreset: "vscode"
