@@ -15,6 +15,9 @@ stow: && dump
 dump:
     brew bundle dump --file=./Brewfile --force
 
+install-brew-packages:
+    arch -arm64 brew bundle install --file=./Brewfile
+
 clean-targets:
     find ~/git -name target -exec rm -rf {} \;
 
