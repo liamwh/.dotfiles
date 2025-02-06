@@ -133,5 +133,6 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "continue.enableTabAutocomplete": true
+  "continue.enableTabAutocomplete": true,
+  "terraform.languageServer.enable": true
 }
