@@ -228,7 +228,13 @@ alias v="nvim"
 alias cat="bat -p"
 alias t="terraform"
 alias b="bacon"
-alias c="cursor ."
+c() {
+    if [ $# -eq 0 ]; then
+        cursor .
+    else
+        cursor "$@"
+    fi
+}
 
 function port-process-kill() {
     if [[ "$OSTYPE" == "darwin"* ]]; then
