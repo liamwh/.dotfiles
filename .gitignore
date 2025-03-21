@@ -85,6 +85,7 @@ deployment/**/volumes/**/data
 .env
 .env.local
 .env.*.local
+.env.private
 
 # Testing
 coverage
@@ -110,3 +111,4 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
