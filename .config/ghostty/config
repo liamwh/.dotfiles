@@ -7,3 +7,4 @@ window-save-state = always
 window-decoration = none
 macos-titlebar-style = hidden
 macos-non-native-fullscreen = true
+initial-command = "$HOME/scripts/attach-latest-zellij.sh"

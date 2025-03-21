@@ -1,4 +1,5 @@
 #!/bin/zsh
+export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin"
 
 latest_session=$(zellij ls --reverse --short | head -n 1)
 if [[ -n "$latest_session" ]]; then
