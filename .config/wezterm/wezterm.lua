@@ -11,14 +11,14 @@ config.use_fancy_tab_bar = false
 local os_name = wezterm.target_triple
 if os_name:find("linux") then
 	config.enable_wayland = false
-	config.default_prog = { "zellij", "attach", "--create", "--index", "0" }
+	config.default_prog = { os.getenv("HOME") .. "/scripts/attach-latest-zellij.sh" }
 elseif os_name:find("windows") then
 	config.default_prog = { "wsl.exe" }
 elseif os_name:find("apple") then
 	config.set_environment_variables = {
 		PATH = os.getenv("PATH") .. ":/opt/homebrew/bin",
 	}
-	config.default_prog = { "zellij", "attach", "--create", "--index", "0" }
+	config.default_prog = { os.getenv("HOME") .. "/scripts/attach-latest-zellij.sh" }
 end
 
 config.keys = {
