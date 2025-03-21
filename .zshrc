@@ -92,6 +92,11 @@ fi
 export EMAIL="liam.woodleigh@gmail.com"
 export NAME="Liam Woodleigh-Hardinge"
 
+# Private env
+if [ -f "$HOME/.env.private" ]; then
+    source "$HOME/.env.private"
+fi
+
 #############################################
 # End of section for declaring path related env variables
 #############################################
@@ -228,6 +233,7 @@ alias v="nvim"
 alias cat="bat -p"
 alias t="terraform"
 alias b="bacon"
+alias zg="z ~/git"
 c() {
     if [ $# -eq 0 ]; then
         cursor .
@@ -279,6 +285,17 @@ function yy() {
 		cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+# Function to attach to the latest Zellij session
+function attach_latest_zellij() {
+  local latest_session=$(zellij ls --reverse --short | head -n 1)
+  if [[ -n "$latest_session" ]]; then
+    echo "Attaching to session: $latest_session"
+    zellij attach "$latest_session"
+  else
+    zellij
+  fi
 }
 
 # Function to fuzzy find open windows using Aerospace on MacOS
