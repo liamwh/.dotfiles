@@ -129,6 +129,7 @@ add_to_path_if_not_exists "/opt/homebrew/opt/mysql-client/bin"
 add_to_path_if_not_exists "$HOME/.nix-profile/bin"
 add_to_path_if_not_exists "$HOME/.surrealdb"
 add_to_path_if_not_exists "$HOME/.bun/bin"
+add_to_path_if_not_exists "/Applications/Touchpoint/bin"
 
 #############################################
 # End of add directories to PATH section
@@ -308,9 +309,17 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
 cx() { cd "$@" && l; }
 
 # Find directory with fzf, cd into it, and list contents
+# Usage: fcd
+#   - Opens fuzzy finder to search directories
+#   - Select directory with arrow keys and Enter
+#   - Example: fcd -> select "src/components" -> cd's into it and lists contents
 fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && l; }
 
 # Find file with fzf and copy path to clipboard
+# Usage: f
+#   - Opens fuzzy finder to search files
+#   - Select file with arrow keys and Enter
+#   - Example: f -> select "README.md" -> copies "./README.md" to clipboard
 f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
 
 # This shell function named fv uses fzf (a fuzzy finder) to interactively search for non-hidden files in the current directory and its subdirectories, then opens the selected file in Neovim.
