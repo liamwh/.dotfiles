@@ -134,5 +134,8 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "continue.enableTabAutocomplete": true,
-  "terraform.languageServer.enable": true
+  "terraform.languageServer.enable": true,
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled"
+  }
 }
