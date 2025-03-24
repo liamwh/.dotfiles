@@ -77,6 +77,11 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
+    "key": "space h",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
     "key": "space -",
     "command": "workbench.action.splitEditorDown",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
