@@ -137,5 +137,7 @@
   "terraform.languageServer.enable": true,
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "enabled"
-  }
+  },
+  "explorer.confirmPasteNative": false,
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
