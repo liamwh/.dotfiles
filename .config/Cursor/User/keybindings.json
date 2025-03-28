@@ -188,11 +188,11 @@
     "when": "chatIsEnabled"
   },
   {
-    "key": "shift+cmd+i",
-    "command": "composer.openAsEditor"
-  },
-  {
     "key": "cmd+r",
     "command": "continue.newSession"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "composer.openAsPane"
   }
 ]
