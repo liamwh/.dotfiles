@@ -139,5 +139,10 @@
     "vs-kubernetes.crd-code-completion": "enabled"
   },
   "explorer.confirmPasteNative": false,
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
 }
