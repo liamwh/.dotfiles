@@ -97,6 +97,12 @@ if [ -f "$HOME/.env.private" ]; then
     source "$HOME/.env.private"
 fi
 
+# Added by Windsurf
+export PATH="/Users/liam/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/liam/.lmstudio/bin"
+
 #############################################
 # End of section for declaring path related env variables
 #############################################
@@ -443,8 +449,4 @@ function commits() {
         }'
 }
 
-# Added by Windsurf
-export PATH="/Users/liam/.codeium/windsurf/bin:$PATH"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/liam/.lmstudio/bin"
+ulimit -n 10240 # Required for sccache
