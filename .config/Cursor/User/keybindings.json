@@ -218,5 +218,9 @@
     "key": "ctrl+shift+j",
     "command": "workbench.action.moveEditorToBelowGroup",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]
