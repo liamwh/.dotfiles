@@ -194,5 +194,19 @@
   {
     "key": "shift+cmd+i",
     "command": "composer.openAsPane"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.moveEditorToNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.moveEditorToPreviousGroup",
+    "when": "editorTextFocus"
   }
 ]
