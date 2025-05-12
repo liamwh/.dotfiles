@@ -208,5 +208,15 @@
     "key": "ctrl+shift+h",
     "command": "workbench.action.moveEditorToPreviousGroup",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.moveEditorToAboveGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "editorTextFocus"
   }
 ]
