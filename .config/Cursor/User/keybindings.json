@@ -222,5 +222,15 @@
   {
     "key": "alt+cmd+b",
     "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "space p n",
+    "command": "editor.action.marker.next", // next error
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space p p",
+    "command": "editor.action.marker.prev", // previous error
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   }
 ]
