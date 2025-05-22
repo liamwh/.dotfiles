@@ -316,23 +316,32 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
 # Function to change directory and list files
 cx() { cd "$@" && l; }
 
-# Find directory with fzf, cd into it, and list contents
-# Usage: fcd
-#   - Opens fuzzy finder to search directories
-#   - Select directory with arrow keys and Enter
-#   - Example: fcd -> select "src/components" -> cd's into it and lists contents
-fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && l; }
+# fcd: fuzzy-search directories & files with fd+fzf, cd into dir or parent of file, then list contents
+# Usage: fcd → select “src/components” → cd into it and run l; select “README.md” → cd into its parent and run l
+fcd() {
+  local selected
+  selected=$(fd --type d --type f . | fzf --height 40% --reverse --border) || return 0
+  [[ -d $selected ]] && z -- "$selected" && l && return
+  cd -- "$(dirname "$selected")" && l
+}
 
-# Find file with fzf and copy path to clipboard
-# Usage: f
-#   - Opens fuzzy finder to search files
-#   - Select file with arrow keys and Enter
-#   - Example: f -> select "README.md" -> copies "./README.md" to clipboard
-f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
+# f: fuzzy-find a file (non-hidden) and copy its path to the clipboard
+f() {
+  local file
+  file=$(fd --type f . | fzf --height 40% --reverse --border) || return 0
+  printf '%s\n' "$file" | pbcopy
+}
 
-# This shell function named fv uses fzf (a fuzzy finder) to interactively search for non-hidden files in the current directory and its subdirectories, then opens the selected file in Neovim.
-fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
+# fv: fuzzy-find a file (non-hidden) and open it in Neovim
+fv() {
+  local file
+  file=$(fd --type f . | fzf --height 40% --reverse --border) || return 0
+  nvim -- "$file"
+}
 
+# bind to Ctrl-F
+zle -N fd_cd_widget fd_cd
+bindkey '^F' fd_cd_widget
 
 # `cwt` is a shell function for running Rust tests using `cargo watch`.
 # If one argument is given, it runs the specified test.
