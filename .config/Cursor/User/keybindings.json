@@ -229,8 +229,18 @@
     "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
+    "key": "space p shift+n",
+    "command": "editor.action.marker.nextInFiles", // next error
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
     "key": "space p p",
     "command": "editor.action.marker.prev", // previous error
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "space p shift+p",
+    "command": "editor.action.marker.prevInFiles", // previous error
     "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   }
 ]
