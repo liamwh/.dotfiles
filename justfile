@@ -45,3 +45,6 @@ install-npm-global-packages:
 # Create an alias for Docker Desktop
 alias-docker-desktop:
     ln -s "/Applications/Docker.app/Contents/MacOS/Docker Desktop" "/Applications/Docker"
+
+set-macos-settings:
+    sh scripts/set-macos-settings.sh
