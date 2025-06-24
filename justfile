@@ -48,3 +48,9 @@ alias-docker-desktop:
 
 set-macos-settings:
     sh scripts/set-macos-settings.sh
+
+export-cursor-extensions:
+    cursor --list-extensions --show-versions > cursor-extensions.txt
+
+import-cursor-extensions:
+    xargs -L1 cursor --install-extension < cursor-extensions.txt
