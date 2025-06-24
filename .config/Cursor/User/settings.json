@@ -148,4 +148,5 @@
   "tailwindCSS.includeLanguages": {
     "rust": "html"
   },
+  "window.commandCenter": false,
 }
