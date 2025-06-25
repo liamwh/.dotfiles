@@ -117,9 +117,14 @@
     "key": "ctl+l",
     "command": "workbench.action.navigateRight"
   },
+  // {
+  //   "key": "space g g",
+  //   "command": "lazygit.openLazygit",
+  //   "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  // },
   {
     "key": "space g g",
-    "command": "lazygit-vscode.toggle",
+    "command": "extension.multiCommand.closeSidebarAndOpenLazyGit",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   },
   {
@@ -242,5 +247,15 @@
     "key": "space p shift+p",
     "command": "editor.action.marker.prevInFiles", // previous error
     "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
   }
 ]

@@ -4,7 +4,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "svelte.enable-ts-plugin": true,
   "go.toolsManagement.autoUpdate": true,
-  "workbench.colorTheme": "Ayu Mirage Bordered",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -149,4 +148,15 @@
     "rust": "html"
   },
   "window.commandCenter": false,
+  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "multiCommand.commands": [
+    {
+      "command": "extension.multiCommand.closeSidebarAndOpenLazyGit",
+      "sequence": [
+        "workbench.action.closeSidebar",
+        "lazygit.openLazygit",
+      ]
+    }
+  ],
+  "workbench.panel.opensMaximized": "always"
 }
