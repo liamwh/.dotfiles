@@ -158,5 +158,13 @@
       ]
     }
   ],
-  "workbench.panel.opensMaximized": "always"
+  "workbench.panel.opensMaximized": "always",
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#FF8C0040", // FF8C00 @25% opacity
+    "editor.selectionForeground": "#000000", // force black text for max contrast
+    "editor.selectionHighlightBackground": "#FF8C0026", // FF8C00 @15%
+    "editor.selectionHighlightBorder": "#FF8C00", // solid border
+    "editor.wordHighlightBackground": "#FF8C001A", // FF8C00 @10%
+    "editor.wordHighlightBorder": "#FF8C00"
+  }
 }
