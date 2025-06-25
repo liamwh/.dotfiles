@@ -2,6 +2,8 @@
 # ^ A shebang isn't required, but allows a justfile to be executed
 #   like a script, with `./justfile test`, for example.
 
+global-npm-packages-file := "global-npm-packages.txt"
+
 # Show available commands
 default:
     @just --list --justfile {{justfile()}}
@@ -36,24 +38,38 @@ sync-cursor:
 
 # Exports all the npm global packages to a file, so we can import them later.
 export-npm-global-packages:
-    pnpm list -g --depth=0 --json | jq -r '.dependencies | keys | .[]' > global-packages.txt
+    pnpm list -g --depth=0 --json | jq -r '.dependencies | keys | .[]' > {{global-npm-packages-file}}
 
 # Installs all the npm global packages from the file
 install-npm-global-packages:
-    cat global-packages.txt | xargs pnpm install -g
+    cat {{global-npm-packages-file}} | xargs pnpm install -g
 
 # Create an alias for Docker Desktop
 alias-docker-desktop:
-    ln -s "/Applications/Docker.app/Contents/MacOS/Docker Desktop" "/Applications/Docker"
+    sudo ln -sfn "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app" "/Applications/Docker Desktop.app"
 
+# Set macOS preferred settings
 set-macos-settings:
     sh scripts/set-macos-settings.sh
 
+# Export Cursor extensions
 export-cursor-extensions:
     cursor --list-extensions --show-versions > cursor-extensions.txt
 
+# Import Cursor extensions
 import-cursor-extensions:
     xargs -L1 cursor --install-extension < cursor-extensions.txt
 
+# Clone the neovim repo
 setup-neovim-repo:
     git clone https://github.com/liamwh/init.lua.git ~/.config/nvim
+
+# Setup a new Macbook
+setup-new-mac:
+    set-macos-settings
+    install-brew-packages
+    install-npm-global-packages
+    setup-neovim-repo
+    import-cursor-extensions
+    sync-cursor
+    alias-docker-desktop
