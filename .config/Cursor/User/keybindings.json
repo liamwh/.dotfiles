@@ -2,32 +2,32 @@
   {
     "key": "space ,",
     "command": "workbench.action.showAllEditors",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space space",
     "command": "workbench.action.quickOpen",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space space",
     "command": "workbench.action.quickOpen",
-    "when": "!editorTextFocus && neovim.mode == normal && !sideBarFocus && !inputFocus && !inQuickOpen && !neovim.expectingKeys"
+    "when": "!editorTextFocus && neovim.mode == normal && !sideBarFocus && !inputFocus && !inQuickOpen"
   },
   {
     "key": "space b b",
     "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space b b",
     "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && !inputFocus"
+    "when": "neovim.mode == normal && !neovim.recording && !inputFocus"
   },
   {
     "key": "space /",
     "command": "workbench.action.findInFiles",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "ctrl+/",
@@ -36,7 +36,7 @@
   {
     "key": "space b d",
     "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "ctrl+w",
@@ -45,22 +45,22 @@
   {
     "key": "space e",
     "command": "workbench.view.explorer",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && !sideBarVisible"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !sideBarVisible"
   },
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && sideBarVisible && !inputFocus"
+    "when": "neovim.mode == normal && !neovim.recording && sideBarVisible && !inputFocus"
   },
   {
     "key": "space f m",
     "command": "workbench.view.explorer",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space s s",
     "command": "workbench.action.showAllSymbols",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "ctrl+b",
@@ -69,27 +69,27 @@
   {
     "key": "space c a",
     "command": "editor.action.quickFix",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space v",
     "command": "workbench.action.splitEditorRight",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space h",
     "command": "workbench.action.splitEditorDown",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space -",
     "command": "workbench.action.splitEditorDown",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space w d",
     "command": "workbench.action.closeEditorsInGroup",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "ctrl+x",
@@ -120,57 +120,57 @@
   // {
   //   "key": "space g g",
   //   "command": "lazygit.openLazygit",
-  //   "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  //   "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   // },
   {
     "key": "space g g",
     "command": "extension.multiCommand.closeSidebarAndOpenLazyGit",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space c r",
     "command": "editor.action.rename",
-    "when": "editorHasRenameProvider && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys && !editorReadonly"
+    "when": "editorHasRenameProvider && editorTextFocus && neovim.mode == normal && !neovim.recording && !editorReadonly"
   },
   {
     "key": "space g r",
     "command": "editor.action.referenceSearch.trigger",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space t s",
     "command": "workbench.view.testing.focus",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space m p",
     "command": "markdown.showPreviewToSide",
-    "when": "editorLangId == 'markdown' && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorLangId == 'markdown' && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space s o",
     "command": "outline.focus",
-    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space s o",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && outline.focus && !inputFocus && !neovim.expectingKeys"
+    "when": "sideBarVisible && outline.focus && !inputFocus"
   },
   {
     "key": "space u",
     "command": "timeline.focus",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space f h",
     "command": "timeline.focus",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space u",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && timeline.active && !inputFocus && !neovim.expectingKeys"
+    "when": "sideBarVisible && timeline.active && !inputFocus"
   },
   {
     "key": "space s r",
@@ -180,12 +180,12 @@
   // {
   //   "key": "space t t",
   //   "command": "todo-tree-view.focus",
-  //   "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+  //   "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   // },
   {
     "key": "space t t",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "(editorTextFocus || sideBarFocus) && !inputFocus && !neovim.expectingKeys"
+    "when": "(editorTextFocus || sideBarFocus) && !inputFocus"
   },
   {
     "key": "shift+cmd+i",
@@ -231,31 +231,31 @@
   {
     "key": "space p n",
     "command": "editor.action.marker.next", // next error
-    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space p shift+n",
     "command": "editor.action.marker.nextInFiles", // next error
-    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space p p",
     "command": "editor.action.marker.prev", // previous error
-    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space p shift+p",
     "command": "editor.action.marker.prevInFiles", // previous error
-    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "ctrl+l",
     "command": "workbench.action.focusRightGroup",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "ctrl+h",
     "command": "workbench.action.focusLeftGroup",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !neovim.expectingKeys"
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   }
 ]
