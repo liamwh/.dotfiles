@@ -54,3 +54,6 @@ export-cursor-extensions:
 
 import-cursor-extensions:
     xargs -L1 cursor --install-extension < cursor-extensions.txt
+
+setup-neovim-repo:
+    git clone https://github.com/liamwh/init.lua.git ~/.config/nvim
