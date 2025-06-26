@@ -259,8 +259,13 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
-    "key": "space g b",
+    "key": "space g b l",
     "command": "gitlens.toggleLineBlame",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
+  {
+    "key": "space g b f",
+    "command": "gitlens.toggleFileBlame",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   }
 ]
