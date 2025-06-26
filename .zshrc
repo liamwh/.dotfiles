@@ -82,7 +82,7 @@ export NIX_CONF_DIR="$HOME/.config/nix"
 # export CARGO_TARGET_DIR="$HOME/.cargo-target"
 # fi
 # export RUST_BACKTRACE=1
-
+export RUSTC_WRAPPER="$(which sccache)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PROTOC="/opt/homebrew/bin/protoc"
