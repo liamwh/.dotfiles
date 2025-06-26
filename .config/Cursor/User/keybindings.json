@@ -257,5 +257,10 @@
     "key": "ctrl+h",
     "command": "workbench.action.focusLeftGroup",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
+  {
+    "key": "space g b",
+    "command": "gitlens.toggleLineBlame",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   }
 ]
