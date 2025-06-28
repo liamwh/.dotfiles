@@ -124,7 +124,7 @@
   // },
   {
     "key": "space g g",
-    "command": "extension.multiCommand.closeSidebarAndOpenLazyGit",
+    "command": "lazygit-vscode.toggle",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
