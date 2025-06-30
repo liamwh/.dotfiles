@@ -214,5 +214,8 @@
       "bold": false,
       "italic": false
     }
-  ]
+  ],
+  "git.suggestSmartCommit": false,
+  "rust-analyzer.check.command": "clippy",
+  "npm.packageManager": "pnpm",
 }
