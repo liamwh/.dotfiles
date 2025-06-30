@@ -121,7 +121,11 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
   },
   "rust-analyzer.testExplorer": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
