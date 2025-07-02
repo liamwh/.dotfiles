@@ -123,7 +123,7 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.formatOnSave": true,
   },
@@ -158,7 +158,8 @@
       "command": "extension.multiCommand.closeSidebarAndOpenLazyGit",
       "sequence": [
         "workbench.action.closeSidebar",
-        "lazygit.openLazygit",
+        "workbench.action.toggleAuxiliaryBar",
+        "lazygit-vscode.toggle",
       ]
     }
   ],

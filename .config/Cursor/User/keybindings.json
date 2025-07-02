@@ -117,11 +117,6 @@
     "key": "ctl+l",
     "command": "workbench.action.navigateRight"
   },
-  // {
-  //   "key": "space g g",
-  //   "command": "lazygit.openLazygit",
-  //   "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
-  // },
   {
     "key": "space g g",
     "command": "lazygit-vscode.toggle",
@@ -226,7 +221,7 @@
   },
   {
     "key": "alt+cmd+b",
-    "command": "workbench.action.toggleAuxiliaryBar"
+    "command": "workbench.action.toggleAuxiliaryBar" // Toggle secondary / auxiliary sidebar bar
   },
   {
     "key": "space p n",
