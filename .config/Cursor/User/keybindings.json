@@ -187,10 +187,10 @@
     "command": "-workbench.action.quickchat.toggle",
     "when": "chatIsEnabled"
   },
-  {
-    "key": "cmd+r",
-    "command": "continue.newSession"
-  },
+  // {
+  //   "key": "cmd+r",
+  //   "command": "continue.newSession"
+  // },
   {
     "key": "shift+cmd+i",
     "command": "composer.openAsPane"
