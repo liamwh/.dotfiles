@@ -66,6 +66,14 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.6
 
 osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
 
+# ─── Screenshots ─────────────────────────────────────────────────────────────
+
+# Create Screenshots directory if it doesn't exist
+mkdir -p ~/Screenshots
+
+# Set the default screenshot location to ~/Screenshots
+defaults write com.apple.screencapture location ~/Screenshots
+
 # ─── Apply settings ────────────────────────────────────────────────────────────
 
 # apply immediately
