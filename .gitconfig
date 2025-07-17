@@ -31,8 +31,10 @@
 	autocorrect = 1
 [credential]
 	helper = store
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 [core]
 	autocrlf = input
 	safecrlf = true
@@ -76,5 +78,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[credential "https://dev.azure.com"]
-	useHttpPath = true
