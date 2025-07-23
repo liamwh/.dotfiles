@@ -123,6 +123,11 @@
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
+    "key": "space g g",
+    "command": "extension.multiCommand.closeBothSidebarsAndOpenLazyGit",
+    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && auxiliaryBarVisible"
+  },
+  {
     "key": "space c r",
     "command": "editor.action.rename",
     "when": "editorHasRenameProvider && editorTextFocus && neovim.mode == normal && !neovim.recording && !editorReadonly"
@@ -267,5 +272,5 @@
     "key": "space g h",
     "command": "workbench.scm.history.focus",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
-  }
+  },
 ]

@@ -158,6 +158,13 @@
       "command": "extension.multiCommand.closeSidebarAndOpenLazyGit",
       "sequence": [
         "workbench.action.closeSidebar",
+        "lazygit-vscode.toggle",
+      ]
+    },
+    {
+      "command": "extension.multiCommand.closeBothSidebarsAndOpenLazyGit",
+      "sequence": [
+        "workbench.action.closeSidebar",
         "workbench.action.toggleAuxiliaryBar",
         "lazygit-vscode.toggle",
       ]
