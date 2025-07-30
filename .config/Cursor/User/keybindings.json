@@ -43,9 +43,16 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
+    // if the sidebar is hidden, open Explorer…
     "key": "space e",
     "command": "workbench.view.explorer",
-    "when": "editorTextFocus && neovim.mode == normal && !neovim.recording && !sideBarVisible"
+    "when": "!sideBarVisible && editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
+  {
+    // if ’s already open, simply focus it
+    "key": "space e",
+    "command": "workbench.action.focusSideBar",
+    "when": "sideBarVisible && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
   {
     "key": "space e",
