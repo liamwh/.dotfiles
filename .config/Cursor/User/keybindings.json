@@ -255,6 +255,30 @@
     "command": "editor.action.marker.prevInFiles", // previous error
     "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
+  // Navigate to the next **error** only
+  {
+    "key": "space p e",
+    "command": "next-error.next.error",
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
+  // Same as above, but search across *all* open files
+  {
+    "key": "space p shift+e",
+    "command": "next-error.nextInFiles.error",
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
+  // Navigate to the next **warning *or* error** (the extension does not offer “warning-only”)
+  {
+    "key": "space p w",
+    "command": "next-error.next.warning",
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
+  // Same as above, but search across *all* open files
+  {
+    "key": "space p shift+w",
+    "command": "next-error.nextInFiles.warning",
+    "when": "!outline.focus && editorTextFocus && neovim.mode == normal && !neovim.recording"
+  },
   {
     "key": "ctrl+l",
     "command": "workbench.action.focusRightGroup",
