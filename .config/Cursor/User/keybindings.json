@@ -304,4 +304,14 @@
     "command": "workbench.scm.history.focus",
     "when": "editorTextFocus && neovim.mode == normal && !neovim.recording"
   },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.moveEditorToPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.moveEditorToNextGroup",
+    "when": "editorTextFocus"
+  }
 ]
