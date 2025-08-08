@@ -39,6 +39,9 @@ export GOPRIVATE="dev.azure.com"
 # EDITOR ENV var
 export EDITOR="nvim"
 
+# opencode
+export PATH=/Users/liam/.opencode/bin:$PATH
+
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 
