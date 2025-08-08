@@ -4,6 +4,8 @@ Liam's dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 Run `just stow` or `stow .` to symlink all the dotfiles to your home directory.
 
+Private env vars go in `~/.env/private.env`
+
 ## Tools I use (non-exhaustive)
 
 ### Terminal
