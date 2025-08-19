@@ -118,27 +118,44 @@ zstyle :compinstall filename "$HOME/.zshrc"
 #############################################
 
 # Function to add a directory to PATH if it's not already in PATH
-add_to_path_if_not_exists() {
+append_to_path_if_not_exists() {
     if [[ ":$PATH:" != *":$1:"* ]]; then
         path+=("$1")
     fi
 }
 
-add_to_path_if_not_exists "/usr/local/opt/libpq/bin"
-add_to_path_if_not_exists "/usr/local/bin"
-add_to_path_if_not_exists "/opt/homebrew/bin"
-add_to_path_if_not_exists "/home/linuxbrew/.linuxbrew/bin"
-add_to_path_if_not_exists "$HOME/.local/bin"
-add_to_path_if_not_exists "$HOME/go/bin"
-add_to_path_if_not_exists "$HOME/.cargo/bin"
-add_to_path_if_not_exists "$HOME/.fly/bin"
-add_to_path_if_not_exists "/var/lib/snapd/snap/bin"
-add_to_path_if_not_exists "$GOPATH/bin"
-add_to_path_if_not_exists "/opt/homebrew/opt/mysql-client/bin"
-add_to_path_if_not_exists "$HOME/.nix-profile/bin"
-add_to_path_if_not_exists "$HOME/.surrealdb"
-add_to_path_if_not_exists "$HOME/.bun/bin"
-add_to_path_if_not_exists "/Applications/Touchpoint/bin"
+# Prepend a directory to PATH (zsh) if not already present.
+# Guards:
+# - Return 2 when no argument provided.
+# - Return 1 when the argument is not an existing directory.
+# - Return 0 when the directory is already in PATH.
+# Uses zsh’s $path array to keep PATH normalized.
+prepend_to_path_if_not_exists() {
+    [[ -z "${1:-}" ]] && return 2
+    [[ ! -d "$1" ]] && return 1
+    [[ ":$PATH:" == *":$1:"* ]] && return 0
+    path=("$1" $path)
+}
+
+
+# Prepends
+prepend_to_path_if_not_exists "/opt/homebrew/bin"
+
+# Appends
+append_to_path_if_not_exists "/usr/local/opt/libpq/bin"
+append_to_path_if_not_exists "/usr/local/bin"
+append_to_path_if_not_exists "/home/linuxbrew/.linuxbrew/bin"
+append_to_path_if_not_exists "$HOME/.local/bin"
+append_to_path_if_not_exists "$HOME/go/bin"
+append_to_path_if_not_exists "$HOME/.cargo/bin"
+append_to_path_if_not_exists "$HOME/.fly/bin"
+append_to_path_if_not_exists "/var/lib/snapd/snap/bin"
+append_to_path_if_not_exists "$GOPATH/bin"
+append_to_path_if_not_exists "/opt/homebrew/opt/mysql-client/bin"
+append_to_path_if_not_exists "$HOME/.nix-profile/bin"
+append_to_path_if_not_exists "$HOME/.surrealdb"
+append_to_path_if_not_exists "$HOME/.bun/bin"
+append_to_path_if_not_exists "/Applications/Touchpoint/bin"
 
 #############################################
 # End of add directories to PATH section
