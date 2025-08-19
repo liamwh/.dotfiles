@@ -1,0 +1,5 @@
+[env]
+CMAKE_ARGS = "-DCMAKE_POLICY_VERSION_MINIMUM=3.31"
+OPENSSL_ROOT_DIR = "/opt/homebrew/opt/openssl@3"
+OPENSSL_LIB_DIR = "/opt/homebrew/opt/openssl@3/lib"
+OPENSSL_INCLUDE_DIR = "/opt/homebrew/opt/openssl@3/include"
