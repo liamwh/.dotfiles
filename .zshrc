@@ -234,8 +234,6 @@ alias gp="git pull"
 alias gpo="git push origin"
 alias gcm="git checkout main"
 
-alias grep='rg'
-
 # Npm aliases
 alias npx="pnpx"
 
