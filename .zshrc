@@ -57,6 +57,7 @@ fi
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
+export VOLTA_HOME="$HOME/.volta"
 
 # Ripgrep Config
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
@@ -138,7 +139,7 @@ prepend_to_path_if_not_exists() {
 }
 
 
-# Prepends
+# Prepends (be aware what's prepended last will be the first in the path)
 prepend_to_path_if_not_exists "/opt/homebrew/bin"
 
 # Appends
@@ -188,6 +189,9 @@ fpath=( $HOME/.wash "${fpath[@]}" )
 # Set up NVM
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+prepend_to_path_if_not_exists "$VOLTA_HOME/bin"
+
 
 #############################################
 # End additional sourcing section
