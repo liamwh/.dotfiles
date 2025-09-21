@@ -4,22 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Use ⌥F for Rectangle Pro Maximize",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": ["option"],
-                                        "optional": []
-                                    }
-                                },
-                                "to": [{ "shell_command": "open -g 'rectangle-pro://execute-action?name=maximize'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Hyper Key: Caps Lock → left shift + left option + left command (⌃⇧⌥⌘)",
                         "manipulators": [
                             {
