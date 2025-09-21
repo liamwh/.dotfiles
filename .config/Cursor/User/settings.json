@@ -230,4 +230,7 @@
   "git.suggestSmartCommit": false,
   "rust-analyzer.check.command": "clippy",
   "npm.packageManager": "pnpm",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
 }
