@@ -1,0 +1,1 @@
+Run `cargo clippy --all-targets --color always --all-features --no-deps` to lint the code, then resolve all remaining errors and warnings.
